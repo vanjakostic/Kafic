@@ -35,9 +35,13 @@
 		<Unit filename="dinstring.cpp" />
 		<Unit filename="dinstring.hpp" />
 		<Unit filename="konobari.hpp" />
+		<Unit filename="kuhinja.hpp" />
 		<Unit filename="kuvari.hpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="prostorije.hpp" />
+		<Unit filename="rerne.hpp" />
 		<Unit filename="spremacice.hpp" />
+		<Unit filename="toalet.hpp" />
 		<Unit filename="zaposleni.hpp" />
 		<Extensions>
 			<code_completion />
