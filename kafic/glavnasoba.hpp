@@ -1,0 +1,9 @@
+#ifndef GLAVNASOBA_HPP_INCLUDED
+#define GLAVNASOBA_HPP_INCLUDED
+class Glavnasoba{
+
+
+};
+
+
+#endif // GLAVNASOBA_HPP_INCLUDED
