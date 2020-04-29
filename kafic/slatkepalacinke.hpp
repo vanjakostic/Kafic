@@ -9,10 +9,44 @@ enum Slatkedodaci{bez_dodataka,kokos,kikiriki,lesnik};
 class Slatkepalacinke: public Palacinke{
 private:
 
-    Slatke tip;
+    Slatke tipslatke;
     Slatkedodaci dodaci;
 
 public:
+
+    Slatkepalacinke(){
+        naziv="Palacinka";
+        cena=120;
+        kalorije=270;
+        posuda=tanjir;
+        tip=slatke;
+        stanje=palacinka_se_ispekla;
+        tipslatke=rafaelo;
+        dodaci=bez_dodatka;
+        }
+
+    Slatkepalacinke(DinString n,int c,int k,Serviranjehrane p,Tippalacinki t,Stanjepalacinki sp, Slatke ts,Slatkedodaci sd){
+        naziv=n;
+        cena=c;
+        kalorije=k;
+        posuda=p;
+        tip=t;
+        stanje=sp;
+        tipslatke=ts;
+        dodaci=sd;
+        }
+
+    Slatkepalacinke(const Slatkepalacinke &sp){
+        naziv=sp.naziv;
+        cena=sp.cena;
+        kalorije=sp.kalorije;
+        posuda=sp.posuda;
+        tip=sp.tip;
+        stanje=sp.stanje;
+        tipslatke=sp.tipslatke;
+        dodaci=sp.dodaci;
+        }
+
     void setTip(Slatke t){tip=t; }
     void setDodaci(Slatkedodaci d){dodaci=d; }
 

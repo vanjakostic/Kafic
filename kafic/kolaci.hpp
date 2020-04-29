@@ -17,6 +17,37 @@ private:
 
 public:
 
+    Kolaci(){
+        naziv="Kolac";
+        cena=250;
+        kalorije=250;
+        posuda=mali_tanjir;
+        vrsta=cheesecake;
+        preliv=bez_preliva;
+        slag=bez_slaga;
+        stanje=ispecen;
+        }
+    Kolaci(DinString n,int c,int k,Serviranjehrane p,Vrstakolaca v,Prelivkolaca pk, Slag s, Stanjekolaca sk){
+        naziv=n;
+        cena=c;
+        kalorije=k;
+        posuda=p;
+        vrsta=v;
+        preliv=pk;
+        slag=s;
+        stanje=sk;
+         }
+    Kolaci(const Kolaci &k){
+        naziv=k.naziv;
+        cena=k.cena;
+        kalorije=k.kalorije;
+        posuda=k.posuda;
+        vrsta=k.vrsta;
+        preliv=k.preliv;
+        slag=k.slag;
+        stanje=k.stanje;
+        }
+
     void setVrsta(Vrstakolaca v){vrsta=v; }
     void setPreliv(Prelivkolaca pk){preliv=pk;}
     void setSlag(Slag s){slag=s;}

@@ -18,7 +18,36 @@ private:
 
 public:
 
-
+    Sladoled(){
+        naziv="Sladoled";
+        cena=150;
+        kalorije=120;
+        posuda=kornet;
+        ukus=cokolada;
+        velicina=srednji;
+        dodatak=bez_dodatka;
+        preliv=nema_preliva;
+        }
+    Sladoled(DinString n,int c,int k,Serviranjehrane p, Ukussladoleda u, Velicinasladoleda v, Dodacisladoledu d, Prelivisladoledu ps){
+        naziv=n;
+        cena=c;
+        kalorije=k;
+        posuda=p;
+        ukus=u;
+        velicina=v;
+        dodatak=d;
+        preliv=ps;
+        }
+    Sladoled(const Sladoled &s){
+        naziv=s.naziv;
+        cena=s.cena;
+        kalorije=s.kalorije;
+        posuda=s.posuda;
+        ukus=s.ukus;
+        velicina=s.velicina;
+        dodatak=s.dodatak;
+        preliv=s.preliv;
+        }
 
     void setUkus(Ukussladoleda u){ukus=u; }
     void setBrojkugli(Velicinasladoleda v){velicina=v; }

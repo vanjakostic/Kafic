@@ -11,6 +11,33 @@ private:
     Toplidodaci dodatak;
 
 public:
+
+    Toplinapici(){
+        naziv="caj";
+        cena=150;
+        kalorije=50;
+        posuda=solja;
+        tip=caj_kamilica;
+        dodatak=med;
+        }
+    Toplinapici(DinString n,int c,int k,Serviranjehrane p,Toplinapicitip t, Toplidodaci d){
+        naziv=n;
+        cena=c;
+        kalorije=k;
+        posuda=p;
+        tip=t;
+        dodatak=d;
+         }
+    Toplinapici(const Toplinapici &tn){
+        naziv=tn.naziv;
+        cena=tn.cena;
+        kalorije=tn.kalorije;
+        posuda=tn.posuda;
+        tip=tn.tip;
+        dodatak=tn.dodatak;
+        }
+
+
     void setTip(Toplinapicitip t){tip=t; }
     void setDodatak(Toplidodaci d){dodatak=d; }
 

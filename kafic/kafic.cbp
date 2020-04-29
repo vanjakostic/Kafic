@@ -41,6 +41,7 @@
 		<Unit filename="konobari.hpp" />
 		<Unit filename="kuhinja.hpp" />
 		<Unit filename="kuvari.hpp" />
+		<Unit filename="list.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="palacinke.hpp" />
 		<Unit filename="pice.hpp" />
@@ -51,6 +52,7 @@
 		<Unit filename="slanepalacinke.hpp" />
 		<Unit filename="slatkepalacinke.hpp" />
 		<Unit filename="spremacice.hpp" />
+		<Unit filename="stolovi.hpp" />
 		<Unit filename="toalet.hpp" />
 		<Unit filename="toplinapici.hpp" />
 		<Unit filename="zaposleni.hpp" />
