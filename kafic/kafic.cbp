@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="case.hpp" />
 		<Unit filename="dinstring.cpp" />
 		<Unit filename="dinstring.hpp" />
 		<Unit filename="escajg.hpp" />
@@ -47,12 +48,14 @@
 		<Unit filename="palacinke.hpp" />
 		<Unit filename="pice.hpp" />
 		<Unit filename="posudjehrana.hpp" />
+		<Unit filename="posudjepice.hpp" />
 		<Unit filename="proizvodi.hpp" />
 		<Unit filename="prostorije.hpp" />
 		<Unit filename="rerne.hpp" />
 		<Unit filename="sladoled.hpp" />
 		<Unit filename="slanepalacinke.hpp" />
 		<Unit filename="slatkepalacinke.hpp" />
+		<Unit filename="solje.hpp" />
 		<Unit filename="sporeti.hpp" />
 		<Unit filename="spremacice.hpp" />
 		<Unit filename="stolovi.hpp" />
