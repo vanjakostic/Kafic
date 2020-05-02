@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="dinstring.cpp" />
 		<Unit filename="dinstring.hpp" />
+		<Unit filename="escajg.hpp" />
 		<Unit filename="glavnasoba.hpp" />
 		<Unit filename="hladninapici.hpp" />
 		<Unit filename="hrana.hpp" />
@@ -45,12 +46,14 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="palacinke.hpp" />
 		<Unit filename="pice.hpp" />
+		<Unit filename="posudjehrana.hpp" />
 		<Unit filename="proizvodi.hpp" />
 		<Unit filename="prostorije.hpp" />
 		<Unit filename="rerne.hpp" />
 		<Unit filename="sladoled.hpp" />
 		<Unit filename="slanepalacinke.hpp" />
 		<Unit filename="slatkepalacinke.hpp" />
+		<Unit filename="sporeti.hpp" />
 		<Unit filename="spremacice.hpp" />
 		<Unit filename="stolovi.hpp" />
 		<Unit filename="toalet.hpp" />
