@@ -2,6 +2,7 @@
 #define SPORETI_HPP_INCLUDED
 
 enum Stanjesporeta{iskljucen,ukljucen,pokvaren};
+
 class Sporeti{
 private:
     Stanjesporeta stanje;
@@ -74,9 +75,6 @@ public:
         }else
         return false;
     }
-
-
-
 
 };
 

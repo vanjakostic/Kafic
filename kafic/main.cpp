@@ -4,8 +4,6 @@ using namespace std;
 
 #include "zaposleni.hpp"
 
-
-
 int main()
 {
 

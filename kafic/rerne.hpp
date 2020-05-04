@@ -2,6 +2,7 @@
 #define RERNE_HPP_INCLUDED
 
 enum Stanjererni{iskljucena,ukljucena,pokvarena};
+
 class Rerne{
 private:
     Stanjererni stanje;
@@ -73,8 +74,6 @@ public:
         }else
         return false;
     }
-
-
 
 
 };

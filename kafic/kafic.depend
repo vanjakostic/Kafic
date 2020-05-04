@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1587816197 source:c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\dinstring.cpp
+	"dinstring.hpp"
+
+1587816128 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\dinstring.hpp
+	<iostream>
+
+1588590462 source:c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\main.cpp
+	<iostream>
+	"zaposleni.hpp"
+
+1588598364 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\zaposleni.hpp
+	"dinstring.hpp"
+

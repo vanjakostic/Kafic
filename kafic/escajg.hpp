@@ -19,6 +19,7 @@ public:
 
     int getBrojostecenih(){return brojostecenih; }
     int getBrojdobrih(){return brojdobrih; }
+
     int getUkupno(){return brojdobrih+brojostecenih; }
 
     bool baci(){

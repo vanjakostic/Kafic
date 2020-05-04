@@ -1,6 +1,7 @@
 #ifndef ZAPOSLENI_HPP_INCLUDED
 #define ZAPOSLENI_HPP_INCLUDED
 
+#include "dinstring.hpp"
 
 enum Radnomesto {kuvar,konobar,spremacica};
 class Zaposleni{

@@ -13,6 +13,10 @@ public:
     Stolovi(Stanjestola s){stanje=s; }
     Stolovi(const Stolovi &s){stanje=s.stanje; }
 
+    void setSto(Stanjestola s){stanje=s; }
+    Stanjestola getSto(){return stanje; }
+
+
     bool zauzmi(){
         if(stanje==slobodan){
             stanje=zauzet;

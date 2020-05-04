@@ -19,13 +19,14 @@ public:
         return false;
     }
 
-    void ispis() const {
+    void ispis()const{
         Stolovi s;
         cout<<endl<<"Stolovi: " << endl;
+        cout<<"----------"<<endl;
 
         for (int i=1;i<=sto.getVelicina();i++){
             cout<<"Sto broj "<<i<<":";
-            sto.read(i, s);
+            sto.read(i,s);
             s.predstaviSe();
             cout<<endl;
         }
