@@ -39,10 +39,10 @@
 		<Unit filename="glavnasoba.hpp" />
 		<Unit filename="hladninapici.hpp" />
 		<Unit filename="hrana.hpp" />
+		<Unit filename="kafic.hpp" />
+		<Unit filename="kasa.hpp" />
 		<Unit filename="kolaci.hpp" />
-		<Unit filename="konobari.hpp" />
 		<Unit filename="kuhinja.hpp" />
-		<Unit filename="kuvari.hpp" />
 		<Unit filename="list.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="palacinke.hpp" />
@@ -57,7 +57,6 @@
 		<Unit filename="slatkepalacinke.hpp" />
 		<Unit filename="solje.hpp" />
 		<Unit filename="sporeti.hpp" />
-		<Unit filename="spremacice.hpp" />
 		<Unit filename="stolovi.hpp" />
 		<Unit filename="toalet.hpp" />
 		<Unit filename="toplinapici.hpp" />

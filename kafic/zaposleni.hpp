@@ -1,24 +1,31 @@
 #ifndef ZAPOSLENI_HPP_INCLUDED
 #define ZAPOSLENI_HPP_INCLUDED
 
+
 enum Radnomesto {kuvar,konobar,spremacica};
 class Zaposleni{
-protected:
+private:
     DinString ime;
     DinString prezime;
     DinString brojtelefona;
     Radnomesto zanimanje;
 
 public:
-    virtual void setIme (DinString i)=0;
-    virtual void setPrezime (DinString p)=0;
-    virtual void setBrojTelefona (DinString bt)=0;
-    virtual void setZanimanje (Radnomesto rm)=0;
+    Zaposleni(){ime="ime"; prezime="prezime"; brojtelefona="broj"; zanimanje=konobar; }
+    Zaposleni(DinString i, DinString p, DinString bt, Radnomesto z){ime=i; prezime=p; brojtelefona=bt; zanimanje=z; }
+    Zaposleni(const Zaposleni &z){ime=z.ime; prezime=z.prezime; brojtelefona=z.brojtelefona; zanimanje=z.zanimanje; }
 
-    virtual DinString getIme()const {}
-    virtual DinString getPrezime()const {}
-    virtual DinString getBrojTelefona()const {}
-    virtual Radnomesto getZanimanje()const {}
+    void setIme (DinString i){ime=i; }
+    void setPrezime (DinString p){prezime=p; }
+    void setBrojTelefona (DinString bt){brojtelefona=bt; }
+    void setZanimanje (Radnomesto rm){zanimanje=rm; }
+
+    DinString getIme()const {return ime;}
+    DinString getPrezime()const {return prezime;}
+    DinString getBrojTelefona()const {return brojtelefona; }
+    Radnomesto getZanimanje()const {return zanimanje; }
+
+
 
 };
 

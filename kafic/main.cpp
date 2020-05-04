@@ -2,11 +2,12 @@
 
 using namespace std;
 
+#include "zaposleni.hpp"
 
 
 
 int main()
 {
-    cout << "Hello world!" << endl;
+
     return 0;
 }
