@@ -9,49 +9,57 @@ class Posudjepice{
 private:
     List<Case> casaa;
     List<Solje> soljaa;
+    int kc;
+    int ks;
 
 public:
 
-    void dodajcasu(const Case& c){
+    bool dodajcasu(const Case& c){
+        if(casaa.getVelicina()<kc){
             return casaa.add(casaa.getVelicina()+1,c);
+            return true;
+        }else
+        return false;
     }
 
-    void dodajsolju(const Solje& s){
+   bool dodajsolju(const Solje& s){
+        if(soljaa.getVelicina()<ks){
             return soljaa.add(soljaa.getVelicina()+1,s);
+            return true;
+        }else
+        return false;
     }
 
-    void ispiscase() const {
+    void ispiscase(){
         Case c;
         cout<<endl<<"Case: " << endl;
 
         for (int i=1;i<=casaa.getVelicina();i++){
             cout<<"Casa broj "<<i<<":";
             casaa.read(i, c);
-            c.predstaviSe();
             cout<<endl;
         }
     }
 
-    void ispissolje() const {
+    void ispissolje(){
         Solje s;
         cout<<endl<<"Solje: " << endl;
 
         for (int i=1;i<=soljaa.getVelicina();i++){
             cout<<"Solja broj "<<i<<":";
             soljaa.read(i, s);
-            s.predstaviSe();
             cout<<endl;
         }
     }
 
-    void razbijcasu(){
-        remove(casaa.getVelicina())
+    /*bool razbijcasu(int n){
+        remove(n);
     }
 
-    void razbijsolju(){
-        remove(soljaa.getVelicina())
+    void razbijsolju(int n){
+        remove(n);
     }
-
+*/
 };
 
 

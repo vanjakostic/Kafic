@@ -48,15 +48,15 @@ public:
         odrzavanjekuhinje=t.odrzavanjekuhinje;
         }
 
-    void setBrojtoaleta(int bt)const {brojtoaleta=bt; }
-    void setBrojrolnipapira(int brp)const {brojrolnipapira=brp; }
-    void setBrojsapuna(int bs)const {brojsapuna=bs; }
-    void setDeterdzent(Stanjehemije d)const  {deterdzent=d; }
-    void setZapod (Stanjehemije zp)const {zapod=zp; }
-    void setZastaklo (Stanjehemije zso)const {zastaklo=zso; }
-    void setZastolove (Stanjehemije zse)const {zastolove=zse; }
-    void setOdrzavanjetoaleta (Stanjehemije ot)const {odrzavanjetoaleta=ot; }
-    void setOdrzavanjekuhinje (Stanjehemije ok)const {odrzavanjekuhinje=ok; }
+    void setBrojtoaleta(int bt) {brojtoaleta=bt; }
+    void setBrojrolnipapira(int brp) {brojrolnipapira=brp; }
+    void setBrojsapuna(int bs){brojsapuna=bs; }
+    void setDeterdzent(Stanjehemije d){deterdzent=d; }
+    void setZapod (Stanjehemije zp) {zapod=zp; }
+    void setZastaklo (Stanjehemije zso) {zastaklo=zso; }
+    void setZastolove (Stanjehemije zse) {zastolove=zse; }
+    void setOdrzavanjetoaleta (Stanjehemije ot) {odrzavanjetoaleta=ot; }
+    void setOdrzavanjekuhinje (Stanjehemije ok) {odrzavanjekuhinje=ok; }
 
 
     int getBrojtoaleta(){return brojtoaleta; }
@@ -73,7 +73,7 @@ public:
         brojrolnipapira+=20;
     }
 
-    bool potrošipapir(){
+    bool potrosipapir(){
         if(brojrolnipapira>=20){
             brojrolnipapira-=20;
             return true;
@@ -192,7 +192,7 @@ public:
             return false;
     }
 
-    bool kupiodrzavanjetoaleta(){
+    bool kupiodrzavanjekuhinje(){
         if(odrzavanjekuhinje==potrosena){
             odrzavanjekuhinje=nepotrosena;
             return true;

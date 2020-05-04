@@ -17,7 +17,7 @@ public:
 
 
     virtual void setPosuda(Serviranjehrane sh)=0;
-    virtual Serviranjehrane()const{}
+    virtual Serviranjehrane getPosuda(){}
 
 };
 

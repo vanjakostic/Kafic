@@ -57,7 +57,7 @@ public:
     Ukussladoleda getUkus(){return ukus; }
     Velicinasladoleda getVelicina(){return velicina; }
     Dodacisladoledu getDodatak(){return dodatak; }
-    Prelivisladoledu getUkus(){return preliv; }
+    Prelivisladoledu getPreliv(){return preliv; }
 
     bool Promeninaveliki(){
         if(velicina==mali || velicina==srednji){
@@ -100,7 +100,7 @@ public:
     }
 
     bool Cokoladnemrvice(){
-        if(dodak==bez_dodatka){
+        if(dodatak==bez_dodatka){
             dodatak=cokoladne_mrvice;
             return true;
         }else
@@ -108,7 +108,7 @@ public:
     }
 
     bool Zvezdice(){
-        if(dodak==bez_dodatka){
+        if(dodatak==bez_dodatka){
             dodatak=zvezdice;
             return true;
         }else
@@ -116,7 +116,7 @@ public:
     }
 
     bool Tropskovoce(){
-        if(dodak==bez_dodatka){
+        if(dodatak==bez_dodatka){
             dodatak=tropsko_voce;
             return true;
         }else
@@ -124,7 +124,7 @@ public:
     }
 
     bool Sarenemrvice(){
-        if(dodak==bez_dodatka){
+        if(dodatak==bez_dodatka){
             dodatak=sarene_mrvice;
             return true;
         }else
@@ -166,6 +166,37 @@ public:
             return true;
         }else
         return false;
+    }
+
+    friend ostream& operator<<(ostream& out, Sladoled &s){
+        out<<"Ukus :"<<s.ukus<<endl<<"Velicina sladoleda :"<<s.velicina<<endl<<"Dodatak :"<<s.dodatak<<endl<<"Preliv :"<<s.preliv<<endl;
+        return out;
+    }
+
+    friend istream& operator>>(istream& in, Sladoled &s){
+        in>>s.ukus>>s.velicina>>s.dodatak>>s.preliv;
+        return in;
+    }
+
+    Sladoled& operator=(const Sladoled &s){
+        ukus=s.ukus;
+        velicina=s.velicina;
+        dodatak=s.dodatak;
+        preliv=s.preliv;
+    }
+
+    friend bool operator==(Sladoled &s1, Sladoled &s2){
+        if(s1.ukus==s2.ukus && s1.velicina==s2.velicina && s1.dodatak==s2.dodatak && s1.preliv==s2.preliv)
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator!=(Sladoled &s1, Sladoled &s2 ){
+        if(s1!=s2)
+            return true;
+        else
+            return false;
     }
 
 };

@@ -10,7 +10,7 @@ private:
 
 public:
     Sporeti(){stanje=iskljucen; temperatura=0; }
-    Sporeti(int temperatura,Stanjesporeta s){
+    Sporeti(int t,Stanjesporeta s){
         temperatura=t;
         if(temperatura==0)
             stanje=iskljucen;

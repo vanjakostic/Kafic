@@ -35,7 +35,7 @@ public:
         kalorije=p.kalorije;
         posuda=p.posuda;
         tip=p.tip;
-        stanje=t.stanje;
+        stanje=p.stanje;
         }
 
     void setTip(Tippalacinki t){tip=t; }
@@ -46,7 +46,7 @@ public:
 
     bool Stavidasepece(){
         if(stanje==palacinke_u_pripremi){
-            stajne==palacinka_se_pece;
+            stanje==palacinka_se_pece;
             return true;
         }else
         return false;
@@ -59,6 +59,8 @@ public:
         }else
         return false;
     }
+
+
 
 
 };

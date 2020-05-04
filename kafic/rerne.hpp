@@ -10,7 +10,7 @@ private:
 
 public:
     Rerne(){stanje=iskljucena; temperatura=0; }
-    Rerne(int temperatura,Stanjererni s){ temperatura=t;
+    Rerne(int t,Stanjererni s){ temperatura=t;
         if(temperatura==0)
             stanje=iskljucena;
         else

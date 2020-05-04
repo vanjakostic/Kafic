@@ -1,13 +1,13 @@
 #ifndef SOLJE_HPP_INCLUDED
 #define SOLJE_HPP_INCLUDED
 
-enum stanjesolje{cista,prljava};
+enum stanjesolje{cistasolja,prljavasolja};
 class Solje{
 private:
     stanjesolje stanje;
 
 public:
-    Solje(){stanje=cista; }
+    Solje(){stanje=cistasolja; }
     Solje( stanjesolje s){stanje=s;}
     Solje(const Solje &c){stanje=c.stanje; }
 
@@ -15,16 +15,16 @@ public:
     stanjesolje getSolju(){return stanje; }
 
     bool operisolju(){
-        if(stanje==prljava){
-            stanje=cista;
+        if(stanje==prljavasolja){
+            stanje=cistasolja;
             return true;
         }else
         return false;
     }
 
     bool isprljaj(){
-        if(stanje==cista){
-            stanje=prljava;
+        if(stanje==cistasolja){
+            stanje=prljavasolja;
             return true;
         }else
         return false;

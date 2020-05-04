@@ -23,7 +23,7 @@ public:
         brojkockica=2;
         }
 
-    Hladninapici(DinString n,int c,int k,Serviranjehrane p,Toplinapicitip t, Toplidodaci d,Led l,int brojkockica){
+    Hladninapici(DinString n,int c,int k,Serviranjepica p,Hladninapicitip t, Led l,int brojkockica){
         naziv=n;
         cena=c;
         kalorije=k;
@@ -79,6 +79,37 @@ public:
             return true;
         }else
         return false;
+    }
+
+    friend ostream& operator<<(ostream& out, Hladninapici &hn){
+        out<<"Tip :"<<hn.getTip<<endl<<"Led :"<<hn.getLed<<endl<<"Broj kockica leda :"<<hn.getBrojkockica;
+        return out;
+    }
+
+    friend istream& operator>>(istream& in, Hladninapici &hn){
+        in>>hn.tip>>hn.led>>hn.brojkockica;
+        return in;
+    }
+
+    Hladninapici& operator=(const Hladninapici &hn){
+        tip=hn.tip;
+        led=hn.led;
+        brojkockica=hn.brojkockica;
+
+    }
+
+    friend bool operator==(Hladninapici &hn1, Hladninapici &hn2){
+        if(hn1.tip==hn2.tip && hn1.led==hn2.led && hn1.brojkockica==hn2.brojkockica )
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator!=(Hladninapici &hn1, Hladninapici &hn2 ){
+        if(hn1!=hn2)
+            return true;
+        else
+            return false;
     }
 
 };

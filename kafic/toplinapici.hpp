@@ -20,7 +20,7 @@ public:
         tip=caj_kamilica;
         dodatak=med;
         }
-    Toplinapici(DinString n,int c,int k,Serviranjehrane p,Toplinapicitip t, Toplidodaci d){
+    Toplinapici(DinString n,int c,int k,Serviranjepica p,Toplinapicitip t, Toplidodaci d){
         naziv=n;
         cena=c;
         kalorije=k;
@@ -84,6 +84,34 @@ public:
         return false;
     }
 
+    friend ostream& operator<<(ostream& out, Toplinapici &tn){
+        out<<"Tip :"<<tn.getTip<<endl<<"Dodatak :"<<tn.getDodatak<<endl;
+        return out;
+    }
+
+    friend istream& operator>>(istream& in, Toplinapici &tn){
+        in>>tn.tip>>tn.dodatak;
+        return in;
+    }
+
+    Toplinapici& operator=(const Toplinapici &tn){
+        tip=tn.tip;
+        dodatak=tn.dodatak;
+    }
+
+    friend bool operator==(Toplinapici &tn1, Toplinapici &tn2){
+        if(tn1.tip==tn2.tip && tn1.dodatak==tn2.dodatak )
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator!=(Toplinapici &tn1, Toplinapici &tn2 ){
+        if(tn1!=tn2)
+            return true;
+        else
+            return false;
+    }
 
 };
 

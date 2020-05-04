@@ -11,11 +11,11 @@ protected:
 public:
 
     Pice(){naziv="nije unet"; cena=150; kalorije=0; posuda=solja; }
-    Pice(DinString n,int c,int k,Serviranjehrane p){naziv=n; cena=c; kalorije=k; posuda=p; }
+    Pice(DinString n,int c,int k,Serviranjepica p){naziv=n; cena=c; kalorije=k; posuda=p; }
     Pice(const Pice &p){naziv=p.naziv; cena=p.cena; kalorije=p.kalorije; posuda=p.posuda; }
 
     virtual void setPosuda(Serviranjepica sp)=0;
-    virtual Serviranjepica()const{}
+    virtual Serviranjepica getPosuda()const{}
 };
 
 

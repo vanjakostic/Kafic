@@ -99,13 +99,46 @@ public:
     }
 
     bool Sklonislag(){
-        if(stanje==ispecen && slag=sa_slagom){
+        if(stanje==ispecen && slag==sa_slagom){
             slag=bez_slaga;
             return true;
         }else
         return false;
     }
 
+    friend ostream& operator<<(ostream& out, Kolaci &k){
+        out<<"Vrsta :"<<k.getVrsta()<<endl<<
+        "Preliv :"<<k.getPreliv()<<endl
+        <<"Slag :"<<k.getSlag()<< endl
+        <<"Stanje :"<<k.getStanje()<<endl;
+        return out;
+    }
+
+    friend istream& operator>>(istream& in,Kolaci &k){
+        in>>k.vrsta>>k.preliv>>k.slag>>k.stanje;
+        return in;
+    }
+
+    Kolaci& operator=(const Kolaci &k){
+        vrsta=k.vrsta;
+        preliv=k.preliv;
+        slag=k.slag;
+        stanje=k.stanje;
+    }
+
+    friend bool operator==(Kolaci &k1, Kolaci &k2){
+        if(k1.vrsta==k2.vrsta && k1.preliv==k2.preliv && k1.slag==k2.slag && k1.stanje==k2.stanje)
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator !=(Kolaci &k1, Kolaci &k2){
+        if(k1!=k2)
+            return true;
+        else
+            return false;
+    }
 };
 
 
