@@ -13,8 +13,8 @@ public:
     Glavnasoba(int k):kapacitet(k){}
 
     bool dodaj(const Stolovi& s){
-        if(sto.getVelicina()<kapacitet){
-            return sto.add(sto.getVelicina()+1,s);
+        if(sto.size()<kapacitet){
+            return sto.add(sto.size()+1,s);
         }
         return false;
     }
@@ -24,16 +24,12 @@ public:
         cout<<endl<<"Stolovi: " << endl;
         cout<<"----------"<<endl;
 
-        for(int i=1;i<=sto.getVelicina();i++){
+        for(int i=1;i<=sto.size();i++){
             cout<<"Sto broj "<<i<<":";
             sto.read(i,s);
             cout<<endl;
         }
     }
-
-
-
-
 
 };
 

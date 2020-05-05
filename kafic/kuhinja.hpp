@@ -27,15 +27,15 @@ public:
     Kuhinja( Kuhinja &k): e(k.e),ph(k.ph),kapacitetrerni(k.kapacitetrerni), kapacitetsporeta(k.kapacitetsporeta){}
 
     bool dodajrernu(const Rerne& r){
-            if(rerna.getVelicina()<kapacitetrerni){
-                return rerna.add(rerna.getVelicina()+1,r);
+            if(rerna.size()<kapacitetrerni){
+                return rerna.add(rerna.size()+1,r);
             }
             return false;
         }
 
     bool dodajsporet(const Sporeti& s){
-        if(sporet.getVelicina()<kapacitetsporeta){
-            return sporet.add(sporet.getVelicina()+1,s);
+        if(sporet.size()<kapacitetsporeta){
+            return sporet.add(sporet.size()+1,s);
         }
         return false;
     }
@@ -45,7 +45,7 @@ public:
         cout<<endl<<"Rerne: " << endl;
         cout<<"----------"<<endl;
 
-        for (int i=1;i<=rerna.getVelicina();i++){
+        for (int i=1;i<=rerna.size();i++){
             cout<<"Rerna broj "<<i<<":";
             rerna.read(i,r);
 

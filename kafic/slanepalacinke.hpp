@@ -77,10 +77,10 @@ public:
         return out;
     }
 
-    friend istream& operator>>(istream& in, Slanepalacinke &sp){
+    /*friend istream& operator>>(istream& in, Slanepalacinke &sp){
         in>>sp.tipslane>>sp.dodaci;
         return in;
-    }
+    }*/
 
     Slanepalacinke& operator=(const Slanepalacinke &sp){
         tipslane=sp.tipslane;
@@ -88,7 +88,7 @@ public:
     }
 
     friend bool operator==(Slanepalacinke &sp1, Slanepalacinke &sp2){
-        if(sp1.tipslane==sp2.tipslane && sp1.dodaci=sp2.dodaci)
+        if(sp1.tipslane==sp2.tipslane && sp1.dodaci==sp2.dodaci)
             return true;
         else
             return false;

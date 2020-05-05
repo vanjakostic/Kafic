@@ -114,10 +114,10 @@ public:
         return out;
     }
 
-    friend istream& operator>>(istream& in,Kolaci &k){
+   /* friend istream& operator>>(istream& in,Kolaci &k){
         in>>k.vrsta>>k.preliv>>k.slag>>k.stanje;
         return in;
-    }
+    }*/
 
     Kolaci& operator=(const Kolaci &k){
         vrsta=k.vrsta;

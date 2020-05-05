@@ -89,10 +89,10 @@ public:
         return out;
     }
 
-    friend istream& operator>>(istream& in, Slatkepalacinke &sp){
+   /* friend istream& operator>>(istream& in, Slatkepalacinke &sp){
         in>>sp.tipslatke>>sp.dodaci;
         return in;
-    }
+    }*/
 
     Slatkepalacinke& operator=(const Slatkepalacinke &sp){
         tipslatke=sp.tipslatke;

@@ -3,7 +3,7 @@
 
 #include "hrana.hpp"
 
-enum Ukussladoleda{jagoda,cokolada,vanila,stracatela,sumsko_voce,tiramisu,limun,plazma};
+enum Ukussladoleda{jagoda,cokolada,vanila,stracatela,sumsko_voce,tiramisu,plazma};
 enum Velicinasladoleda{veliki,mali,srednji};
 enum Dodacisladoledu{bez_dodatka,cokoladne_mrvice, zvezdice,tropsko_voce,sarene_mrvice};
 enum Prelivisladoledu{nema_preliva, cokoladni,karamela,vocni};
@@ -173,10 +173,10 @@ public:
         return out;
     }
 
-    friend istream& operator>>(istream& in, Sladoled &s){
+    /*friend istream& operator>>(istream& in, Sladoled &s){
         in>>s.ukus>>s.velicina>>s.dodatak>>s.preliv;
         return in;
-    }
+    }*/
 
     Sladoled& operator=(const Sladoled &s){
         ukus=s.ukus;

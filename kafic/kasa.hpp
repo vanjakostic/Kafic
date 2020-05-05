@@ -17,9 +17,8 @@ public:
         trenutnostanje+=n;
     }
 
-    ostream& operator<<(ostream& out, const Kasa &k){
-        cout<<"Trenutno stanjeu kasi :";
-        cout<<k.getKasa<<endl;
+    friend ostream& operator<<(ostream& out, const Kasa &k){
+        out<<"~~~~~KASA~~~~~"<<endl<<"Trenutno stanjeu kasi :"<<k.trenutnostanje<<endl<<endl;
         return out;
     }
 

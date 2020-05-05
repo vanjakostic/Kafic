@@ -7,7 +7,7 @@ enum Led{bez_leda,sa_ledom};
 
 class Hladninapici:public Pice{
 private:
-    Hladninapici tip;
+    Hladninapicitip tip;
     Led led;
     int brojkockica;
 
@@ -23,7 +23,7 @@ public:
         brojkockica=2;
         }
 
-    Hladninapici(DinString n,int c,int k,Serviranjepica p,Hladninapicitip t, Led l,int brojkockica){
+    Hladninapici(DinString n,int c,int k,Serviranjepica p,Hladninapicitip t, Led l,int b){
         naziv=n;
         cena=c;
         kalorije=k;
@@ -43,7 +43,6 @@ public:
         kalorije=hn.kalorije;
         posuda=hn.posuda;
         tip=hn.tip;
-        dodatak=hn.dodatak;
         brojkockica=hn.brojkockica;
         led=hn.led;
         }
@@ -82,14 +81,14 @@ public:
     }
 
     friend ostream& operator<<(ostream& out, Hladninapici &hn){
-        out<<"Tip :"<<hn.getTip<<endl<<"Led :"<<hn.getLed<<endl<<"Broj kockica leda :"<<hn.getBrojkockica;
+        out<<"Tip :"<<hn.tip<<endl<<"Led :"<<hn.led<<endl<<"Broj kockica leda :"<<hn.brojkockica;
         return out;
     }
 
-    friend istream& operator>>(istream& in, Hladninapici &hn){
+   /* friend istream& operator>>(istream& in, Hladninapici &hn){
         in>>hn.tip>>hn.led>>hn.brojkockica;
         return in;
-    }
+    }*/
 
     Hladninapici& operator=(const Hladninapici &hn){
         tip=hn.tip;

@@ -8,49 +8,52 @@ using namespace std;
 
 template <class T>
 class List{
-private:
-    struct listEl{
-        T data;
-        struct listEl* next;
-    };
-    listEl *head;
-    listEl *tail;
-    int brojclanova;
+	private:
+		struct listEl{
+			T content;
+			struct listEl* next;
+		};
+		listEl *head;
+		listEl *tail;
+		int noEl;
 
-public:
-    List(){head=tail=NULL; brojclanova=0; }
-    List(const List<T>&);
-    List<T>& operator=(const List<T>&);
-    virtual ~List();
+	public:
+		List(){
+			head=tail=NULL;
+			noEl=0;
+		}
 
-	int getVelicina(){return brojclanova; }
-	bool prazno(){
-        if(head==NULL)
-            return true;
-        else
-            return false;
-	}
+		List(const List<T>&);
 
-	bool add(int, const T&);
-    bool remove(int);
-    bool read(int, T&)const;
-    void clear();
+		List<T>& operator=(const List<T>&);
 
+		virtual ~List();
+
+		int size() const { return noEl; }
+
+		bool empty() const { return head == NULL ? 1 : 0; }
+
+		bool add(int, const T&);
+
+		bool remove(int);
+
+		bool read(int, T&)const;
+
+		void clear();
 };
+
 
 template <class T>
 ostream& operator<<(ostream& out, const List<T>& rl) {
-	out<<endl;
-	out<<"---------------------"<<endl;
-	for(int i=1;i<=rl.getVelicina();i++){
-		if(i!=1)
-        out<<", ";
-
+	out << endl;
+	out << "--------" << endl;
+	for(int i = 1; i <= rl.size(); i++){
+		if(i != 1) out << ", ";
 		T res;
 		rl.read(i, res);
-		out<<res;
+		out << res;
 	}
-	out<<endl<<"-----------------------"<<endl;
+	out << endl << "--------" << endl;
 	return out;
 }
 
@@ -58,27 +61,27 @@ template <class T>
 List<T>::List(const List<T>& rl) {
 	head = NULL;
 	tail = NULL;
-	brojclanova = 0;
+	noEl = 0;
 
-	for(int i=1;i<=rl.brojclanova;i++){
+	for(int i = 1; i <= rl.noEl; i++){
 		T res;
-		if(rl.read(i,res))
-			add(i,res);
+		if(rl.read(i, res))
+			add(i, res);
 	}
 }
 
 template <class T>
 List<T>& List<T>::operator=(const List<T>& rl) {
-	if(this!=&rl) {
+	if(this != &rl) {
 		clear();
-		head=NULL;
-		tail=NULL;
-		brojclanova=0;
+		head = NULL;
+		tail = NULL;
+		noEl = 0;
 
-		for(int i=1;i<=rl.getVelicina();i++){
+		for(int i = 1; i <= rl.noEl; i++){
 			T res;
-			if(rl.read(i,res))
-				add(i,res);
+			if(rl.read(i, res))
+				add(i, res);
 		}
 	}
 	return *this;
@@ -91,33 +94,31 @@ List<T>::~List() {
 }
 
 template <class T>
-bool List<T>::add(int n,const T& newData) {
-	if(n<1 || n>brojclanova+1)
+bool List<T>::add(int n, const T& newContent) {
+	if(n < 1 || n > noEl + 1)
 		return false;
 	else {
 		listEl* newEl = new listEl;
 		if(newEl == NULL)
 			return false;
 		else {
-			newEl->data = newData;
-			if(n==1){
+			newEl->content = newContent;
+			if(n == 1) {
 				newEl->next = head;
 				head = newEl;
-
-			}else if(n==brojclanova+1){
-				newEl->next=NULL;
+			} else if(n == noEl + 1) {
+				newEl->next = NULL;
 				tail->next = newEl;
-
-			}else{
-				listEl* temp=head;
+			} else {
+				listEl* temp = head;
 				for(int i = 2; i < n; i++)
-					temp=temp->next;
+					temp = temp->next;
 				newEl->next = temp->next;
 				temp->next = newEl;
 			}
-			brojclanova++;
-			if(newEl->next==NULL)
-				tail=newEl;
+			noEl++;
+			if(newEl->next == NULL)
+				tail = newEl;
 			return true;
 		}
 	}
@@ -125,47 +126,45 @@ bool List<T>::add(int n,const T& newData) {
 
 template <class T>
 bool List<T>::remove(int n){
-	if(n<1 || n>brojclanova)
+	if(n < 1 || n > noEl)
 		return false;
 	else {
-		if(n==1){
+		if(n == 1) {
 			listEl* del = head;
 			head = head->next;
-			if(tail==del)
-				tail=NULL;
+			if(tail == del)
+				tail = NULL;
 			delete del;
-			brojclanova--;
-
-		}else{
-			listEl* temp=head;
-			for(int i=2;i<n;i++)
-				temp=temp->next;
-			listEl* del=temp->next;
-			temp->next=del->next;
-			if(tail==del)
-				tail=temp;
+			noEl--;
+		} else {
+			listEl* temp = head;
+			for(int i = 2; i < n; i++)
+				temp = temp->next;
+			listEl* del = temp->next;
+			temp->next = del->next;
+			if(tail == del)
+				tail = temp;
 			delete del;
-			brojclanova--;
+			noEl--;
 		}
 		return true;
 	}
 }
 
 template <class T>
-bool List<T>::read(int n,T& retVal)const{
-	if(n<1 || n>brojclanova)
+bool List<T>::read(int n,T& retVal) const {
+	if(n < 1 || n > noEl)
 		return false;
-	else{
-		if(n==1)
-			retVal=head->data;
-
-		else if(n==brojclanova)
-			retVal=tail->data;
+	else {
+		if(n == 1)
+			retVal = head->content;
+		else if(n == noEl)
+			retVal = tail->content;
 		else {
-			listEl* temp=head;
-			for(int i=1;i<n;i++)
-				temp=temp->next;
-			retVal=temp->data;
+			listEl* temp = head;
+			for(int i = 1; i < n; i++)
+				temp = temp->next;
+			retVal = temp->content;
 		}
 		return true;
 	}
@@ -176,8 +175,5 @@ void List<T>::clear() {
 	while(!empty())
 		remove(1);
 }
-
-
-
 
 #endif

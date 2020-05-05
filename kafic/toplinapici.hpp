@@ -3,7 +3,7 @@
 
 #include "pice.hpp"
 enum Toplinapicitip{caj_kamilica,caj_nana,caj_zeleni,caj_brusnica,caj_limun,kafa,kapucino,toplacokolada};
-enum Toplidodaci{mleko,secer,med,slag,bez_dodatka,limun};
+enum Toplidodaci{mleko,secer,med,slag,bez_dodatka_topli,limun};
 
 class Toplinapici:public Pice{
 private:
@@ -45,7 +45,7 @@ public:
     Toplidodaci getDodatak(){return dodatak; }
 
     bool dodajmleko(){
-        if(dodatak==bez_dodatka && (tip==kafa || tip==kapucino)){
+        if(dodatak==bez_dodatka_topli && (tip==kafa || tip==kapucino)){
             dodatak=mleko;
             return true;
         }else
@@ -53,7 +53,7 @@ public:
     }
 
     bool dodajslag(){
-        if(dodatak==bez_dodatka && tip==toplacokolada ){
+        if(dodatak==bez_dodatka_topli && tip==toplacokolada ){
             dodatak=slag;
             return true;
         }else
@@ -61,7 +61,7 @@ public:
     }
 
     bool dodajsecer(){
-        if(dodatak==bez_dodatka && (tip==kafa || tip==kapucino || tip==caj_brusnica || tip==caj_kamilica || tip==caj_limun || tip==caj_nana || tip==caj_zeleni)){
+        if(dodatak==bez_dodatka_topli && (tip==kafa || tip==kapucino || tip==caj_brusnica || tip==caj_kamilica || tip==caj_limun || tip==caj_nana || tip==caj_zeleni)){
             dodatak=secer;
             return true;
         }else
@@ -69,7 +69,7 @@ public:
     }
 
     bool dodajmed(){
-        if(dodatak==bez_dodatka && (tip==caj_brusnica || tip==caj_kamilica || tip==caj_limun || tip==caj_nana || tip==caj_zeleni)){
+        if(dodatak==bez_dodatka_topli && (tip==caj_brusnica || tip==caj_kamilica || tip==caj_limun || tip==caj_nana || tip==caj_zeleni)){
             dodatak=med;
             return true;
         }else
@@ -77,7 +77,7 @@ public:
     }
 
     bool dodajlimun(){
-        if(dodatak==bez_dodatka && (tip==caj_brusnica || tip==caj_kamilica || tip==caj_limun || tip==caj_nana || tip==caj_zeleni)){
+        if(dodatak==bez_dodatka_topli && (tip==caj_brusnica || tip==caj_kamilica || tip==caj_limun || tip==caj_nana || tip==caj_zeleni)){
             dodatak=limun;
             return true;
         }else
@@ -85,14 +85,14 @@ public:
     }
 
     friend ostream& operator<<(ostream& out, Toplinapici &tn){
-        out<<"Tip :"<<tn.getTip<<endl<<"Dodatak :"<<tn.getDodatak<<endl;
+        out<<"Tip :"<<tn.tip<<endl<<"Dodatak :"<<tn.dodatak<<endl;
         return out;
     }
 
-    friend istream& operator>>(istream& in, Toplinapici &tn){
+    /*friend istream& operator>>(istream& in, Toplinapici &tn){
         in>>tn.tip>>tn.dodatak;
         return in;
-    }
+    }*/
 
     Toplinapici& operator=(const Toplinapici &tn){
         tip=tn.tip;

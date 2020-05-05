@@ -4,6 +4,7 @@
 #include "dinstring.hpp"
 
 enum Radnomesto {kuvar,konobar,spremacica};
+
 class Zaposleni{
 private:
     DinString ime;
