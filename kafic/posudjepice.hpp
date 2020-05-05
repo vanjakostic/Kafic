@@ -14,6 +14,7 @@ private:
 
 public:
 
+    Posudjepice(){kc=80; ks=80; }
     bool dodajcasu(const Case& c){
         if(casaa.size()<kc){
             return casaa.add(casaa.size()+1,c);
@@ -30,25 +31,31 @@ public:
         return false;
     }
 
-    void ispiscase(){
+
+    void ispisposudjepice(){
+        Solje s;
+        cout<<endl<<"Solje: " << endl;
+        cout<<"----------"<<endl;
+        for (int i=1;i<=soljaa.size();i++){
+            cout<<"Solja broj "<<i<<":";
+            soljaa.read(i, s);
+            if(s.getSolju()==prljavasolja)
+                cout<<"prljava"<<endl;
+            else
+                cout<<"cista"<<endl;
+        }
+
         Case c;
         cout<<endl<<"Case: " << endl;
+        cout<<"----------"<<endl;
 
         for (int i=1;i<=casaa.size();i++){
             cout<<"Casa broj "<<i<<":";
             casaa.read(i, c);
-            cout<<endl;
-        }
-    }
-
-    void ispissolje(){
-        Solje s;
-        cout<<endl<<"Solje: " << endl;
-
-        for (int i=1;i<=soljaa.size();i++){
-            cout<<"Solja broj "<<i<<":";
-            soljaa.read(i, s);
-            cout<<endl;
+            if(c.getCasu()==prljava)
+                cout<<"prljava"<<endl;
+            else
+                cout<<"cista"<<endl;
         }
     }
 

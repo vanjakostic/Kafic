@@ -200,6 +200,58 @@ public:
         else
             return false;
     }
+
+   /* int brojtoaleta;
+    int brojrolnipapira;
+    int brojsapuna;
+    Stanjehemije deterdzent;
+    Stanjehemije zapod;
+    Stanjehemije zastaklo;
+    Stanjehemije zastolove;
+    Stanjehemije odrzavanjetoaleta;
+    Stanjehemije odrzavanjekuhinje;*/
+    friend ostream& operator<<(ostream &out, const Toalet &t){
+        out<<"~~~~~STANJE TOALETA~~~~~"<<endl;
+
+        out<<"Broj toaleta :"<<t.brojtoaleta<<endl
+        <<"Broj toalet papira :"<<t.brojrolnipapira<<endl;
+        out<<"Broj sapuna :"<<t.brojsapuna<<endl;
+        out<<"Stanje deterdzenta :";
+        if(t.deterdzent==potrosena)
+            out<<"Potrosen"<<endl;
+        else
+            out<<"Nepotrosen"<<endl;
+        out<<"Stanje sredstva za ciscenje poda:";
+        if(t.zapod==potrosena)
+            out<<"Potroseno"<<endl;
+        else
+            out<<"Nepotroseno"<<endl;
+        out<<"Stanje sredstva za ciscenje stakla:";
+        if(t.zastaklo==potrosena)
+            out<<"Potroseno"<<endl;
+        else
+            out<<"Nepotroseno"<<endl;
+        out<<"Stanje sredstva za ciscenje stolova:";
+        if(t.zastolove==potrosena)
+            out<<"Potroseno"<<endl;
+        else
+            out<<"Nepotroseno"<<endl;
+        out<<"Stanje sredstva za odrzavanje toaleta:";
+        if(t.odrzavanjetoaleta==potrosena)
+            out<<"Potroseno"<<endl;
+        else
+            out<<"Nepotroseno"<<endl;
+        out<<"Stanje sredstva za odrzavanje kuhinje:";
+        if(t.odrzavanjekuhinje==potrosena)
+            out<<"Potroseno"<<endl;
+        else
+            out<<"Nepotroseno"<<endl;
+
+        out<<endl;
+
+
+        return out;
+    }
 };
 
 

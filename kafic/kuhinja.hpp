@@ -40,22 +40,56 @@ public:
         return false;
     }
 
-    void ispisrerni(){
+    void ispis(Escajg e, Posudjehrana ph, Posudjepice pp){
+        cout<<endl<<"KUHINJA~~~~~KUHINJA~~~~~KUHINJA"<<endl;
+
         Rerne r;
         cout<<endl<<"Rerne: " << endl;
         cout<<"----------"<<endl;
 
         for (int i=1;i<=rerna.size();i++){
-            cout<<"Rerna broj "<<i<<":";
+            cout<<"Rerna broj "<<i<<":"<<endl;
             rerna.read(i,r);
+            cout<<"Stanje :"<<endl;
+            if(r.getStanje()==ukljucena)
+                cout<<"Ukljucena"<<endl;
+            else
+                cout<<"Iskljucena"<<endl;
+            cout<<"Temperatura rerne :"<<r.getTemperatura()<<endl;
 
             cout<<endl;
         }
-    }
 
-    friend ostream& operator<<(ostream& out,Kuhinja &k){
-        out<<"Kuhinja"<<endl<<"----------"<<endl;
-        out<<"Rerne:"<<endl;
+        Sporeti s;
+        cout<<endl<<"Sporeti: " << endl;
+        cout<<"----------"<<endl;
+
+        for (int i=1;i<=sporet.size();i++){
+            cout<<"Sporet broj "<<i<<":"<<endl;
+            sporet.read(i,s);
+            cout<<"Stanje :";
+            if(s.getStanje()==ukljucen)
+                cout<<"Ukljucen"<<endl;
+            else
+                cout<<"Iskljucen"<<endl;
+            cout<<"Temperatura sporeta :"<<s.getTemperatura()<<endl;
+
+            cout<<endl;
+        }
+
+        cout<<endl<<"Escajg: "<<endl;
+        cout<<"----------"<<endl;
+        cout<<"Broj dobrih :"<<e.getBrojdobrih()<<endl;
+        cout<<"Broj ostecenih :"<<e.getBrojostecenih()<<endl<<endl;
+
+        cout<<endl<<"Posudje za hranu: "<<endl;
+        cout<<"----------"<<endl;
+        cout<<"Broj opranih tanjira:"<<ph.getOpranitanjiri()<<endl<<"Broj prljavih tanjira:"<<ph.getPrljavitanjiri()<<endl;
+        cout<<"Broj opranih tanjirica:"<<ph.getOpranitanjirici()<<endl<<"Broj prljavih tanjirica:"<<ph.getPrljavitanjirici()<<endl;
+        cout<<"Broj opranih cinija:"<<ph.getOpranecinije()<<endl<<"Broj prljavih cinija:"<<ph.getPrljavecinije()<<endl<<endl;
+
+
+        pp.ispisposudjepice();
     }
 
 };

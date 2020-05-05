@@ -51,6 +51,84 @@ int main()
     kasaa1.dodajukasu(250);
     cout<<kasaa1;
 
+    Toalet toalett1;
+    cout<<toalett1;
+
+    toalett1.kupitpapir();
+    toalett1.kupisapun();
+    cout<<toalett1;
+
+    Glavnasoba glavnasobaa1;
+    Stolovi stoo1,stoo2,stoo3,stoo4;
+
+    glavnasobaa1.dodajSto(stoo1);
+    glavnasobaa1.dodajSto(stoo2);
+    glavnasobaa1.dodajSto(stoo3);
+    glavnasobaa1.dodajSto(stoo4);
+
+    glavnasobaa1.ispisstolova();
+    stoo2.zauzmi();
+    glavnasobaa1.ispisstolova();
+
+    Kuhinja kuhinjaa1;
+    Rerne rernaa1;
+    Rerne rernaa2(rernaa1);
+    Rerne rernaa3(150,ukljucena);
+
+    kuhinjaa1.dodajrernu(rernaa1);
+    kuhinjaa1.dodajrernu(rernaa2);
+    kuhinjaa1.dodajrernu(rernaa3);
+
+    Sporeti sporett1;
+    Sporeti sporett2(sporett1);
+    Sporeti sporett3(7,ukljucen);
+
+    kuhinjaa1.dodajsporet(sporett1);
+    kuhinjaa1.dodajsporet(sporett2);
+    kuhinjaa1.dodajsporet(sporett3);
+
+    Escajg escajgg(0,12);
+
+    Posudjehrana posudjehh(15,15,15,5,5,5);
+
+    Posudjepice posudjepp;
+
+    Case casaa1;
+    Case casaa2(prljava);
+    Case casaa3;
+
+    posudjepp.dodajcasu(casaa1);
+    posudjepp.dodajcasu(casaa2);
+    posudjepp.dodajcasu(casaa3);
+
+    Solje soljaa1;
+    Solje soljaa2(soljaa1);
+    Solje soljaa3;
+
+    posudjepp.dodajsolju(soljaa1);
+    posudjepp.dodajsolju(soljaa2);
+    posudjepp.dodajsolju(soljaa3);
+
+    kuhinjaa1.ispis(escajgg,posudjehh,posudjepp);
+
+    Rerne rernaa4(250,ukljucena);
+    kuhinjaa1.dodajrernu(rernaa4);
+
+    Sporeti sporett4(6,ukljucen);
+    kuhinjaa1.dodajsporet(sporett4);
+
+    escajgg.osteti();
+    escajgg.osteti();
+
+    posudjehh.operisve();
+
+    Case casaa4(prljava);
+    posudjepp.dodajcasu(casaa4);
+
+    Solje soljaa4(prljavasolja);
+    posudjepp.dodajsolju(soljaa4);
+
+    kuhinjaa1.ispis(escajgg,posudjehh,posudjepp);
 
 
     return 0;

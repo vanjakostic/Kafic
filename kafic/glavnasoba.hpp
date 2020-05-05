@@ -10,16 +10,18 @@ private:
     int kapacitet;
 public:
 
-    Glavnasoba(int k):kapacitet(k){}
+    Glavnasoba(){kapacitet=20; }
+    Glavnasoba(int k){kapacitet=k; }
+    Glavnasoba(const Glavnasoba &g){kapacitet=g.kapacitet; }
 
-    bool dodaj(const Stolovi& s){
+    bool dodajSto(const Stolovi &s){
         if(sto.size()<kapacitet){
             return sto.add(sto.size()+1,s);
         }
         return false;
     }
 
-    void ispis(){
+    void ispisstolova(){
         Stolovi s;
         cout<<endl<<"Stolovi: " << endl;
         cout<<"----------"<<endl;
@@ -27,7 +29,11 @@ public:
         for(int i=1;i<=sto.size();i++){
             cout<<"Sto broj "<<i<<":";
             sto.read(i,s);
-            cout<<endl;
+
+            if(s.getSto()==zauzet)
+                cout<<"Zauzet"<<endl;
+            else
+                cout<<"Slobodan"<<endl;
         }
     }
 
