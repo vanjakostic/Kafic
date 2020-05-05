@@ -16,8 +16,8 @@ public:
     Hrana(const Hrana &h){naziv=h.naziv; cena=h.cena; kalorije=h.kalorije; posuda=h.posuda; }
 
 
-    virtual void setPosuda(Serviranjehrane sh)=0;
-    virtual Serviranjehrane getPosuda(){}
+    void setPosuda(Serviranjehrane sh){posuda=sh; }
+     Serviranjehrane getPosuda(){return posuda; }
 
 };
 

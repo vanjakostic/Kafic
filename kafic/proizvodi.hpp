@@ -16,13 +16,14 @@ public:
     Proizvodi(DinString n, int c, int k){naziv=n; cena=c; kalorije=k; }
     Proizvodi(const Proizvodi &p){naziv=p.naziv; cena=p.cena; kalorije=p.kalorije; }
 
-    virtual void setNaziv(DinString n)=0;
-    virtual void setCena(int c)=0;
-    virtual void setKalorije(int k)=0;
+     void setNaziv(DinString n){naziv=n; }
+     void setCena(int c){cena=c; }
+     void setKalorije(int k){kalorije=k; }
 
-    virtual DinString getNaziv()const{};
-    virtual int getCena()const{};
-    virtual int getKalorije()const{};
+     DinString getNaziv(){return naziv; }
+    int getCena(){return cena; }
+     int getKalorije(){return kalorije;}
+
 
 
 

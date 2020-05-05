@@ -130,6 +130,24 @@ int main()
 
     kuhinjaa1.ispis(escajgg,posudjehh,posudjepp);
 
+    Kolaci kolacc1;
+    cout<<kolacc1;
+
+    Sladoled sladoledd1;
+    cout<<sladoledd1;
+
+    Slanepalacinke slanaa1;
+    cout<<slanaa1;
+
+    Slatkepalacinke slatkaa1;
+    cout<<slatkaa1;
+
+    Hladninapici hladnii1;
+    cout<<hladnii1;
+
+    Toplinapici toplii1;
+    cout<<toplii1;
+
 
     return 0;
 }

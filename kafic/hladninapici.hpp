@@ -81,8 +81,24 @@ public:
     }
 
     friend ostream& operator<<(ostream& out, Hladninapici &hn){
-        out<<"Tip :"<<hn.tip<<endl<<"Led :"<<hn.led<<endl<<"Broj kockica leda :"<<hn.brojkockica;
-        return out;
+        out<<endl<<"HLADNO PICE"<<endl;
+        out<<"Naziv : hladno pice"<<endl;
+        out<<"Cena :"<<hn.cena<<endl;
+        out<<"Kalorije :"<<hn.kalorije<<endl;
+        out<<"Vrsta :";
+        if(hn.tip==sokovi)
+            out<<"Sok"<<endl;
+        else if(hn.tip==milksejk)
+            out<<"Milksejk"<<endl;
+        else
+            out<<"Smoothie"<<endl;
+        out<<"Led :";
+        if(hn.led==sa_ledom)
+            out<<"Sa ledom"<<endl;
+        else
+            out<<"Bez leda"<<endl;
+
+     return out;
     }
 
    /* friend istream& operator>>(istream& in, Hladninapici &hn){

@@ -14,8 +14,8 @@ public:
     Pice(DinString n,int c,int k,Serviranjepica p){naziv=n; cena=c; kalorije=k; posuda=p; }
     Pice(const Pice &p){naziv=p.naziv; cena=p.cena; kalorije=p.kalorije; posuda=p.posuda; }
 
-    virtual void setPosuda(Serviranjepica sp)=0;
-    virtual Serviranjepica getPosuda()const{}
+     void setPosuda(Serviranjepica sp){posuda=sp; }
+     Serviranjepica getPosuda(){return posuda; }
 };
 
 

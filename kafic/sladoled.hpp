@@ -169,8 +169,90 @@ public:
     }
 
     friend ostream& operator<<(ostream& out, Sladoled &s){
-        out<<"Ukus :"<<s.ukus<<endl<<"Velicina sladoleda :"<<s.velicina<<endl<<"Dodatak :"<<s.dodatak<<endl<<"Preliv :"<<s.preliv<<endl;
+        out<<endl<<"Sladoled"<<endl;
+        out<<"Naziv : sladoled"<<endl;
+        out<<"Cena :"<<s.cena<<endl;
+        out<<"Kalorije :"<<s.kalorije<<endl;
+        out<<"Posuda :";
+        switch(s.posuda){
+        case tanjir:
+            out<<"Tanjir"<<endl;
+            break;
+        case mali_tanjir:
+            out<<"Tanjiric"<<endl;
+            break;
+        case cinija:
+            out<<"Cinija"<<endl;
+            break;
+        case kornet:
+            out<<"Kornet"<<endl;
+            break;
+        }
+        out<<"Ukus :";
+        switch(s.ukus){
+        case jagoda:
+            out<<"Jagoda"<<endl;
+            break;
+        case cokolada:
+            out<<"Cokolada"<<endl;
+            break;
+        case vanila:
+            out<<"vanila"<<endl;
+            break;
+        case plazma:
+            out<<"Plazma"<<endl;
+            break;
+        case stracatela:
+            out<<"Stracatela"<<endl;
+            break;
+        case sumsko_voce:
+            out<<"Sumsko voce"<<endl;
+            break;
+        case tiramisu:
+            out<<"Tiramisu"<<endl;
+            break;
+        }
+        out<<"Preliv :";
+        if(s.preliv==nema_preliva)
+            out<<"Bez preliva"<<endl;
+        else if(s.preliv==cokoladni)
+            out<<"Cokoladni"<<endl;
+        else if(s.preliv==karamela)
+            out<<"Karamela"<<endl;
+        else
+            out<<"Vocni preliv"<<endl;
+        out<<"Velicina :";
+        switch(s.velicina){
+        case mali:
+            out<<"Mali sladoled"<<endl;
+            break;
+        case srednji:
+            out<<"Srednji sladoled"<<endl;
+            break;
+        case veliki:
+            out<<"Veliki sladoled"<<endl;
+            break;
+        }
+        out<<"Dodaci :";
+        switch(s.dodatak){
+        case cokoladne_mrvice:
+            out<<"Cokoladne mrvice"<<endl;
+            break;
+        case zvezdice:
+            out<<"Zvezdice"<<endl;
+            break;
+        case sarene_mrvice:
+            out<<"Sarene mrvice"<<endl;
+            break;
+        case tropsko_voce:
+            out<<"Tropsko voce"<<endl;
+            break;
+        case bez_dodatka:
+            out<<"bez dodataka"<<endl;
+            break;
+        }
         return out;
+
     }
 
     /*friend istream& operator>>(istream& in, Sladoled &s){

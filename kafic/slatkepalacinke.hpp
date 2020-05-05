@@ -85,7 +85,43 @@ public:
     }
 
     friend ostream& operator<<(ostream& out, Slatkepalacinke &sp){
-        out<<"Tip slatke palacinke :"<<sp.tip<<endl<<"Dodaci :"<<sp.dodaci<<endl;
+        out<<endl<<"Slatke palacinke"<<endl;
+        out<<"Naziv : slatka palacinka"<<endl;
+        out<<"Cena :"<<sp.cena<<endl;
+        out<<"Kalorije :"<<sp.kalorije<<endl;
+        out<<"Posuda :";
+        switch(sp.posuda){
+        case tanjir:
+            out<<"Tanjir"<<endl;
+            break;
+        case mali_tanjir:
+            out<<"Tanjiric"<<endl;
+            break;
+        case cinija:
+            out<<"Cinija"<<endl;
+            break;
+        case kornet:
+            out<<"Kornet"<<endl;
+            break;
+        }
+        out<<"Tip :";
+        if(sp.tipslatke==rafaelo)
+            out<<"Rafaelo palacinka"<<endl;
+        else if(sp.tipslatke==mars)
+            out<<"Mars palacinka"<<endl;
+        else
+            out<<"Snikers palacinka"<<endl;
+
+        out<<"Dodaci :";
+        if(sp.dodaci==kokos)
+            out<<"Kokos"<<endl;
+        else if(sp.dodaci==kikiriki)
+            out<<"Kikiriki"<<endl;
+        else if(sp.dodaci==lesnik)
+            out<<"Lesnik"<<endl;
+        else
+            out<<"Nema dodatka"<<endl;
+
         return out;
     }
 

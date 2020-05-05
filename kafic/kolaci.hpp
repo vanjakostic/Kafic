@@ -107,10 +107,54 @@ public:
     }
 
     friend ostream& operator<<(ostream& out, Kolaci &k){
-        out<<"Vrsta :"<<k.getVrsta()<<endl<<
-        "Preliv :"<<k.getPreliv()<<endl
-        <<"Slag :"<<k.getSlag()<< endl
-        <<"Stanje :"<<k.getStanje()<<endl;
+        out<<endl<<"KOLAC"<<endl;
+        out<<"Naziv : kolac"<<endl;
+        out<<"Cena :"<<k.cena<<endl;
+        out<<"Kalorije :"<<k.kalorije<<endl;
+        out<<"Posuda :";
+        switch(k.posuda){
+        case tanjir:
+            out<<"Tanjir"<<endl;
+            break;
+        case mali_tanjir:
+            out<<"Tanjiric"<<endl;
+            break;
+        case cinija:
+            out<<"Cinija"<<endl;
+            break;
+        case kornet:
+            out<<"Kornet"<<endl;
+            break;
+        }
+        out<<"Vrsta :";
+        switch(k.vrsta){
+        case cheesecake:
+            out<<"Cheesecake"<<endl;
+            break;
+        case coko_moko:
+            out<<"Coko moko torta"<<endl;
+            break;
+        case plazmatorta:
+            out<<"Plazma torta"<<endl;
+            break;
+        }
+        out<<"Preliv :";
+        if(k.preliv==bez_preliva)
+            out<<"Bez preliva"<<endl;
+        else
+            out<<"Sa prelivom"<<endl;
+        out<<"Slag :";
+        if(k.slag=bez_slaga)
+            out<<"Bez slaga"<<endl;
+        else
+            out<<"Sa slagom"<<endl;
+        out<<"Stanje :";
+        if(k.stanje==ispecen)
+            out<<"Ispecen"<<endl;
+        else if(k.stanje==u_pripremi)
+            out<<"Priprema se"<<endl;
+        if(k.stanje==pece_se)
+            out<<"Pece se"<<endl;
         return out;
     }
 

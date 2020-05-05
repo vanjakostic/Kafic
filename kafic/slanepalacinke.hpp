@@ -73,7 +73,37 @@ public:
     }
 
     friend ostream& operator<<(ostream& out, Slanepalacinke &sp){
-        out<<"Tip slane palacinke :"<<sp.tipslane<<endl<<"Dodaci :"<<sp.dodaci<<endl;
+        out<<endl<<"Slane palacinke"<<endl;
+        out<<"Naziv : slana palacinka"<<endl;
+        out<<"Cena :"<<sp.cena<<endl;
+        out<<"Kalorije :"<<sp.kalorije<<endl;
+        out<<"Posuda :";
+        switch(sp.posuda){
+        case tanjir:
+            out<<"Tanjir"<<endl;
+            break;
+        case mali_tanjir:
+            out<<"Tanjiric"<<endl;
+            break;
+        case cinija:
+            out<<"Cinija"<<endl;
+            break;
+        case kornet:
+            out<<"Kornet"<<endl;
+            break;
+        }
+        out<<"Tip slane palacinke :";
+        if(sp.tipslane==pica_palacinka)
+            out<<"Pica palacinka"<<endl;
+        else
+            out<<"Vegetarijanska palacinka"<<endl;
+        out<<"Dodatak :";
+        if(sp.dodaci==mix_povrca)
+            out<<"Mix povrca"<<endl;
+        else if(sp.dodaci==bez_dodatka_slana)
+            out<<"Bez dodataka"<<endl;
+        else
+            out<<"Sunka"<<endl;
         return out;
     }
 

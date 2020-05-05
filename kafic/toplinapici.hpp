@@ -85,12 +85,65 @@ public:
     }
 
     friend ostream& operator<<(ostream& out, Toplinapici &tn){
-        out<<"Tip :"<<tn.tip<<endl<<"Dodatak :"<<tn.dodatak<<endl;
-        return out;
+        out<<endl<<"TOPLI NAPICI"<<endl;
+        out<<"Naziv : topli napitak"<<endl;
+        out<<"Cena :"<<tn.cena<<endl;
+        out<<"Kalorije :"<<tn.kalorije<<endl;
+        out<<"Tip :";
+        switch(tn.tip){
+        case caj_brusnica:
+            out<<"Caj od brusnice"<<endl;
+            break;
+        case caj_kamilica:
+            out<<"Caj od kamilica"<<endl;
+            break;
+        case caj_limun:
+            out<<"Caj od limuna"<<endl;
+            break;
+        case caj_nana:
+            out<<"Caj od nane"<<endl;
+            break;
+        case caj_zeleni:
+            out<<"Zeleni cas"<<endl;
+            break;
+        case kafa:
+            out<<"Kafa"<<endl;
+            break;
+        case kapucino:
+            out<<"Kapucino"<<endl;
+            break;
+        case toplacokolada:
+            out<<"Topla cokolada"<<endl;
+            break;
+        }
+        out<<"Dodatak :";
+        switch(tn.dodatak){
+        case mleko:
+            out<<"Mleko"<<endl;
+            break;
+        case secer:
+            out<<"Secer"<<endl;
+            break;
+        case med:
+            out<<"Med"<<endl;
+            break;
+        case slag:
+            out<<"Slag"<<endl;
+            break;
+        case bez_dodatka_topli:
+            out<<"Bez dodatka"<<endl;
+            break;
+        case limun:
+            out<<"Limun"<<endl;
+            break;
+            }
+
+     return out;
     }
 
-    /*friend istream& operator>>(istream& in, Toplinapici &tn){
-        in>>tn.tip>>tn.dodatak;
+    /*friend istream &operator>>(istream &in, Toplinapici &tn){
+        in>>tn.tip;
+        in>>tn.dodatak;
         return in;
     }*/
 
