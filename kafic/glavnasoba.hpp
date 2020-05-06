@@ -22,6 +22,7 @@ public:
     }
 
     void ispisstolova(){
+
         Stolovi s;
         cout<<endl<<"Stolovi: " << endl;
         cout<<"----------"<<endl;
@@ -34,6 +35,7 @@ public:
                 cout<<"Zauzet"<<endl;
             else
                 cout<<"Slobodan"<<endl;
+
         }
     }
 

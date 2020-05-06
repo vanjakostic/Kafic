@@ -36,6 +36,7 @@ int main()
     Zaposleni zaposleni1("Radoje", "Radivojevic","0658260321",konobar);
     Zaposleni zaposleni2("Djole","Bojanic","0669249686",kuvar);
     Zaposleni zaposleni3("Dragica","Sumovic","0612589471",spremacica);
+    Zaposleni zaposleni4("Milica","Nikolic","0612536489",kuvar);
 
     kaficc1.dodajZaposlenog(zaposleni1);
     kaficc1.dodajZaposlenog(zaposleni2);
@@ -44,6 +45,10 @@ int main()
     kaficc1.ispis();
 
     kaficc1.dodajZaposlenog(zaposleni3);
+    kaficc1.dodajZaposlenog(zaposleni4);
+    kaficc1.ispis();
+
+    kaficc1.dajOtkaz(zaposleni4,4);
     kaficc1.ispis();
 
     Kasa kasaa1;
@@ -59,7 +64,7 @@ int main()
     cout<<toalett1;
 
     Glavnasoba glavnasobaa1;
-    Stolovi stoo1,stoo2,stoo3,stoo4;
+    Stolovi stoo1,stoo2(zauzet),stoo3,stoo4;
 
     glavnasobaa1.dodajSto(stoo1);
     glavnasobaa1.dodajSto(stoo2);
@@ -67,7 +72,7 @@ int main()
     glavnasobaa1.dodajSto(stoo4);
 
     glavnasobaa1.ispisstolova();
-    stoo2.zauzmi();
+    stoo2.oslobodi();
     glavnasobaa1.ispisstolova();
 
     Kuhinja kuhinjaa1;

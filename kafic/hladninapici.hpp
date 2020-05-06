@@ -127,6 +127,20 @@ public:
             return false;
     }
 
+    friend bool operator <=(Hladninapici &hn1, Hladninapici &hn2){
+        if(hn1.kalorije<=hn2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator >=(Hladninapici &hn1, Hladninapici &hn2){
+        if(hn1.kalorije>=hn2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
 };
 
 

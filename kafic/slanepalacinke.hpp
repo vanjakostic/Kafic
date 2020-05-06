@@ -131,6 +131,20 @@ public:
             return false;
     }
 
+    friend bool operator <=(Slanepalacinke &sp1, Slanepalacinke &sp2){
+        if(sp1.kalorije<=sp2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator >=(Slanepalacinke &sp1, Slanepalacinke &sp2){
+        if(sp1.kalorije>=sp2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
 
 
 };

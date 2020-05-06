@@ -28,13 +28,23 @@ public:
     friend ostream& operator<<(ostream& out, const Kafic k)
     {
         out<<"Naziv :"<<k.naziv<<endl<<"Lokacija :"<<k.mesto<<endl<<"Kapacitet zaposlenih :"<<k.kz<<endl;
+        return out;
     }
+
+   /* friend istream& operator>>(istream &in,Kafic &k){
+        in>>k.naziv;
+        return in;
+    }*/
 
     bool dodajZaposlenog(const Zaposleni &z){
         if(zap.size()<kz){
            return zap.add(zap.size()+1,z);
         }else
         return false;
+    }
+
+     void dajOtkaz(const Zaposleni &z,int n){
+        zap.remove(n);
     }
 
     void ispis(){
@@ -57,10 +67,6 @@ public:
         }
         cout<<endl;
     }
-
-   /* void dajOtkaz(int n){
-    remove(n);
-    }*/
 };
 
 #endif // KAFIC_HPP_INCLUDED

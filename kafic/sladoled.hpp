@@ -281,6 +281,20 @@ public:
             return false;
     }
 
+    friend bool operator <=(Sladoled &s1, Sladoled &s2){
+        if(s1.kalorije<=s2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator >=(Sladoled &s1, Sladoled &s2){
+        if(s1.kalorije>=s2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
 };
 
 

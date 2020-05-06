@@ -40,6 +40,14 @@ public:
         return false;
     }
 
+    void ukloniRernu(const Rerne &r,int n){
+        rerna.remove(n);
+    }
+
+    void ukloniSporet(const Sporeti &s,int n){
+        sporet.remove(n);
+    }
+
     void ispis(Escajg e, Posudjehrana ph, Posudjepice pp){
         cout<<endl<<"KUHINJA~~~~~KUHINJA~~~~~KUHINJA"<<endl;
 

@@ -183,6 +183,20 @@ public:
         else
             return false;
     }
+
+    friend bool operator <=(Kolaci &k1, Kolaci &k2){
+        if(k1.kalorije<=k2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator >=(Kolaci &k1, Kolaci &k2){
+        if(k1.kalorije>=k2.kalorije)
+            return true;
+        else
+            return false;
+    }
 };
 
 

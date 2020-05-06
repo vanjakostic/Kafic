@@ -5,7 +5,7 @@
 1587816128 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\dinstring.hpp
 	<iostream>
 
-1588713660 source:c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\main.cpp
+1588763881 source:c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\main.cpp
 	<iostream>
 	"kafic.hpp"
 	"kasa.hpp"
@@ -36,7 +36,7 @@
 1588676166 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\zaposleni.hpp
 	"dinstring.hpp"
 
-1588680467 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kafic.hpp
+1588762472 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kafic.hpp
 	"list.hpp"
 	"zaposleni.hpp"
 
@@ -46,7 +46,7 @@
 
 1588680352 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kasa.hpp
 
-1588702087 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kuhinja.hpp
+1588763144 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kuhinja.hpp
 	"list.hpp"
 	"rerne.hpp"
 	"sporeti.hpp"
@@ -62,7 +62,7 @@
 
 1588447493 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\posudjehrana.hpp
 
-1588703200 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\posudjepice.hpp
+1588762902 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\posudjepice.hpp
 	"list.hpp"
 	"case.hpp"
 	"solje.hpp"
@@ -78,39 +78,39 @@
 
 1588695482 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\toalet.hpp
 
-1588697954 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\glavnasoba.hpp
+1588764462 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\glavnasoba.hpp
 	"stolovi.hpp"
 	"list.hpp"
 
-1588599714 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\stolovi.hpp
+1588764462 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\stolovi.hpp
 
-1588713615 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\proizvodi.hpp
+1588715901 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\proizvodi.hpp
 	"dinstring.hpp"
 
 1588713615 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\hrana.hpp
 	"proizvodi.hpp"
 
-1588637168 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\pice.hpp
+1588717069 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\pice.hpp
 	"proizvodi.hpp"
 
-1588675054 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\sladoled.hpp
+1588715932 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\sladoled.hpp
 	"hrana.hpp"
 
-1588714952 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kolaci.hpp
+1588715154 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kolaci.hpp
 	"hrana.hpp"
 
 1588638246 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\palacinke.hpp
 	"hrana.hpp"
 
-1588669268 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\slatkepalacinke.hpp
+1588716774 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\slatkepalacinke.hpp
 	"palacinke.hpp"
 
-1588669296 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\slanepalacinke.hpp
+1588716826 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\slanepalacinke.hpp
 	"palacinke.hpp"
 
-1588669429 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\hladninapici.hpp
+1588717384 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\hladninapici.hpp
 	"pice.hpp"
 
-1588669566 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\toplinapici.hpp
+1588718655 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\toplinapici.hpp
 	"pice.hpp"
 

@@ -201,15 +201,6 @@ public:
             return false;
     }
 
-   /* int brojtoaleta;
-    int brojrolnipapira;
-    int brojsapuna;
-    Stanjehemije deterdzent;
-    Stanjehemije zapod;
-    Stanjehemije zastaklo;
-    Stanjehemije zastolove;
-    Stanjehemije odrzavanjetoaleta;
-    Stanjehemije odrzavanjekuhinje;*/
     friend ostream& operator<<(ostream &out, const Toalet &t){
         out<<"~~~~~STANJE TOALETA~~~~~"<<endl;
 

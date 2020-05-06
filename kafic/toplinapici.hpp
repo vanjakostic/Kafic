@@ -166,6 +166,20 @@ public:
             return false;
     }
 
+    friend bool operator <=(Toplinapici &tn1, Toplinapici &tn2){
+        if(tn1.kalorije<=tn2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
+    friend bool operator >=(Toplinapici &tn1, Toplinapici &tn2){
+        if(tn1.kalorije>=tn2.kalorije)
+            return true;
+        else
+            return false;
+    }
+
 };
 
 

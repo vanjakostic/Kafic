@@ -59,14 +59,14 @@ public:
         }
     }
 
-    /*bool razbijcasu(int n){
-        remove(n);
+    void razbijCasu(const Case &c,int n){
+        casaa.remove(n);
     }
 
-    void razbijsolju(int n){
-        remove(n);
+    void razbijSolju(int n){
+        soljaa.remove(n);
     }
-*/
+
 };
 
 
