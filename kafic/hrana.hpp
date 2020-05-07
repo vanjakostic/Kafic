@@ -17,7 +17,8 @@ public:
 
 
     void setPosuda(Serviranjehrane sh){posuda=sh; }
-     Serviranjehrane getPosuda(){return posuda; }
+    Serviranjehrane getPosuda(){return posuda; }
+
 
 };
 

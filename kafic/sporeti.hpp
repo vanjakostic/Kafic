@@ -46,7 +46,7 @@ public:
     bool ukljuci(){
         if(stanje==iskljucen){
             stanje=ukljucen;
-            temperatura=100;
+            temperatura=10;
             return true;
         }
     }

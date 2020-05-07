@@ -252,7 +252,6 @@ public:
             break;
         }
         return out;
-
     }
 
     /*friend istream& operator>>(istream& in, Sladoled &s){

@@ -75,7 +75,7 @@ public:
         return false;
     }
 
-    bool operitanjirci(){
+    bool operitanjiric(){
         if(prljavitanjirici>0){
             prljavitanjirici--;
             opranitanjirici++;

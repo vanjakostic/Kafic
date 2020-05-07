@@ -19,7 +19,6 @@ public:
                t(bt,brp,bs,d,zp,zso,zse,ot,ok), k(bo,bd,otanjiri,omt,oc,pt,pmt,pc,kr,ks), g(k) {}
     Prostorije(Prostorije &p):t(p.t),k(p.k),g(p.g){}
 
-
 };
 
 #endif // PROSTORIJE_HPP_INCLUDED

@@ -17,14 +17,16 @@ public:
         cena=150;
         kalorije=50;
         posuda=solja;
+        zapremina=0.3;
         tip=caj_kamilica;
-        dodatak=med;
+        dodatak=bez_dodatka_topli;
         }
-    Toplinapici(DinString n,int c,int k,Serviranjepica p,Toplinapicitip t, Toplidodaci d){
+    Toplinapici(DinString n,int c,int k,Serviranjepica p,double z, Toplinapicitip t, Toplidodaci d){
         naziv=n;
         cena=c;
         kalorije=k;
         posuda=p;
+        zapremina=z;
         tip=t;
         dodatak=d;
          }
@@ -33,10 +35,12 @@ public:
         cena=tn.cena;
         kalorije=tn.kalorije;
         posuda=tn.posuda;
+        zapremina=tn.zapremina;
         tip=tn.tip;
         dodatak=tn.dodatak;
         }
 
+        double getZapremina()const {return zapremina; }
 
     void setTip(Toplinapicitip t){tip=t; }
     void setDodatak(Toplidodaci d){dodatak=d; }
@@ -89,6 +93,11 @@ public:
         out<<"Naziv : topli napitak"<<endl;
         out<<"Cena :"<<tn.cena<<endl;
         out<<"Kalorije :"<<tn.kalorije<<endl;
+        if(tn.posuda==solja)
+            out<<"Solja"<<endl;
+        else
+            out<<"Casa"<<endl;
+        out<<"Zapremina :"<<tn.zapremina<<endl;
         out<<"Tip :";
         switch(tn.tip){
         case caj_brusnica:

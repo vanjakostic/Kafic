@@ -63,7 +63,7 @@ public:
         casaa.remove(n);
     }
 
-    void razbijSolju(int n){
+    void razbijSolju(const Solje &s,int n){
         soljaa.remove(n);
     }
 

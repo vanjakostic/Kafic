@@ -20,6 +20,7 @@ private:
     int kapacitetrerni;
     int kapacitetsporeta;
 
+
 public:
 
     Kuhinja():e(),ph(),pp(),kapacitetrerni(5),kapacitetsporeta(5){}
@@ -49,7 +50,6 @@ public:
     }
 
     void ispis(Escajg e, Posudjehrana ph, Posudjepice pp){
-        cout<<endl<<"KUHINJA~~~~~KUHINJA~~~~~KUHINJA"<<endl;
 
         Rerne r;
         cout<<endl<<"Rerne: " << endl;
@@ -58,7 +58,7 @@ public:
         for (int i=1;i<=rerna.size();i++){
             cout<<"Rerna broj "<<i<<":"<<endl;
             rerna.read(i,r);
-            cout<<"Stanje :"<<endl;
+            cout<<"Stanje :";
             if(r.getStanje()==ukljucena)
                 cout<<"Ukljucena"<<endl;
             else

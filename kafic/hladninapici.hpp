@@ -18,16 +18,18 @@ public:
         cena=50;
         kalorije=50;
         posuda=casa;
+        zapremina=0.3;
         tip=sokovi;
         led=sa_ledom;
         brojkockica=2;
         }
 
-    Hladninapici(DinString n,int c,int k,Serviranjepica p,Hladninapicitip t, Led l,int b){
+    Hladninapici(DinString n,int c,int k,Serviranjepica p,double z, Hladninapicitip t, Led l,int b){
         naziv=n;
         cena=c;
         kalorije=k;
         posuda=p;
+        zapremina=z;
         tip=t;
         if(b<5)
         brojkockica=b;
@@ -42,6 +44,7 @@ public:
         cena=hn.cena;
         kalorije=hn.kalorije;
         posuda=hn.posuda;
+        zapremina=hn.zapremina;
         tip=hn.tip;
         brojkockica=hn.brojkockica;
         led=hn.led;
@@ -55,6 +58,8 @@ public:
     Hladninapicitip getTip(){return tip; }
     Led getLed(){return led; }
     int getBrojkockica(){return brojkockica; }
+
+    double getZapremina()const{ return zapremina; }
 
     bool Dodajled(){
         if(brojkockica <=5){
@@ -85,6 +90,12 @@ public:
         out<<"Naziv : hladno pice"<<endl;
         out<<"Cena :"<<hn.cena<<endl;
         out<<"Kalorije :"<<hn.kalorije<<endl;
+        out<<"Solja ili casa :";
+        if(hn.posuda==solja)
+            out<<"Solja"<<endl;
+        else
+            out<<"Casa"<<endl;
+        out<<"Zapremina :"<<hn.zapremina<<endl;
         out<<"Vrsta :";
         if(hn.tip==sokovi)
             out<<"Sok"<<endl;

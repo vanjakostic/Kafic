@@ -17,7 +17,7 @@ private:
 
 public:
     Toalet(){
-        brojtoaleta=4;
+        brojtoaleta=2;
         brojrolnipapira=60;
         brojsapuna=10;
         deterdzent,zapod,zastaklo,odrzavanjekuhinje,odrzavanjetoaleta=nepotrosena;
@@ -85,7 +85,7 @@ public:
         brojsapuna+=5;
     }
 
-    bool potrsisapun(){
+    bool potrosisapun(){
         if(brojsapuna>=5){
             brojsapuna-=5;
             return true;
@@ -202,7 +202,7 @@ public:
     }
 
     friend ostream& operator<<(ostream &out, const Toalet &t){
-        out<<"~~~~~STANJE TOALETA~~~~~"<<endl;
+        out<<"~~~~~ TOALET ~~~~~"<<endl;
 
         out<<"Broj toaleta :"<<t.brojtoaleta<<endl
         <<"Broj toalet papira :"<<t.brojrolnipapira<<endl;
