@@ -7,22 +7,22 @@ class Proizvodi{
 protected:
 
     DinString naziv;
-    int cena;
-    int kalorije;
+    double cena;
+    double kalorije;
 
 public:
 
     Proizvodi(){naziv="nije unet"; cena=150; kalorije=0; }
-    Proizvodi(DinString n, int c, int k){naziv=n; cena=c; kalorije=k; }
+    Proizvodi(DinString n, double c, double k){naziv=n; cena=c; kalorije=k; }
     Proizvodi(const Proizvodi &p){naziv=p.naziv; cena=p.cena; kalorije=p.kalorije; }
 
      void setNaziv(DinString n){naziv=n; }
-     void setCena(int c){cena=c; }
-     void setKalorije(int k){kalorije=k; }
+     void setCena(double c){cena=c; }
+     void setKalorije(double k){kalorije=k; }
 
      DinString getNaziv(){return naziv; }
-    int getCena(){return cena; }
-     int getKalorije(){return kalorije;}
+    double getCena(){return cena; }
+     double getKalorije(){return kalorije;}
 
 
 

@@ -63,38 +63,48 @@ int main()
     zaposleni4.setBrojTelefona("0612589347");
     zaposleni4.setZanimanje(kuvar);
 
-    //get metode zaposlenih isprobane u ispisu zaposlenih u klasi "Kafic"
+
 
     kaficc1.dodajZaposlenog(zaposleni1);
     kaficc1.dodajZaposlenog(zaposleni2);
 
+    Kasa kasaa1;
+    Kasa kasaa2(255.00,200);
+    Kasa kasaa3(kasaa2);
+    Kasa kasaa4;
     cout<<"Provera operatora za ispis sa dodatim zaposlenima:"<<endl;
     cout<<kaficc1;
-    kaficc1.ispis();
+    kaficc1.ispis(kasaa1);
 
     cout<<endl;
     cout<<"Provera operatora za ispis sa dodatim zaposlenima:"<<endl;
     kaficc1.dodajZaposlenog(zaposleni3);
     kaficc1.dodajZaposlenog(zaposleni4);
-    kaficc1.ispis();
+    kaficc1.ispis(kasaa1);
     cout<<endl;
 
     cout<<"Provera operatora za ispis sa manje zaposlenih (otkaz jednom zaposlenom) :"<<endl;
     kaficc1.dajOtkaz(zaposleni4,4);
-    kaficc1.ispis();
+    kaficc1.ispis(kasaa1);
     cout<<endl;
 
-    Kasa kasaa1;
-    Kasa kasaa2(250);
-    Kasa kasaa3(kasaa2);
-    Kasa kasaa4;
+    kasaa1.setKasa(0.00);
+    Kolaci kolacc;
+    Sladoled sladoledd1,sladoledd2,sladoledd3(sladoledd1);
+    Sladoled sladoledd4("Sladoled",50,300,kornet,jagoda,srednji,bez_dodatka,nema_preliva);
 
-    kasaa1.setKasa(500);
+    kasaa1.dodajukasu(kolacc);
+    kasaa1.dodajProdato(kolacc);
 
-    cout<<"Provera operatora za ispis kase :"<<endl<<kasaa1<<endl<<"Provera get metode za kasu:" <<kasaa1.getKasa()<<endl<<endl;
-    kasaa1.dodajukasu(250);
-    cout<<"Stanje u kasi nakon dodavanja novca"<<endl;
-    cout<<kasaa1<<endl;
+    kaficc1.ispis(kasaa1);
+    kaficc1.ispis(kasaa1);
+
+    kasaa1.dodajProdato(sladoledd4);
+    kasaa1.dodajukasu(sladoledd4);
+
+    kaficc1.ispis(kasaa1);
+
+
 
     cout<<"~~~~~~~~~~~~~~~~~~~~~~~~~~~"<<endl;
     cout<<"~~~~~~~~PROSTORIJE~~~~~~~~~"<<endl;
@@ -473,9 +483,6 @@ int main()
     cout<<kolacc3;
     cout<<kolacc4;
 
-
-    Sladoled sladoledd1,sladoledd2,sladoledd3(sladoledd1);
-    Sladoled sladoledd4("Sladoled",50,300,kornet,jagoda,srednji,bez_dodatka,nema_preliva);
     cout<<sladoledd1;
     cout<<sladoledd4;
     sladoledd2.setUkus(cokolada);
@@ -868,5 +875,6 @@ int main()
     hladnii1!=hladnii2;
     hladnii1>=hladnii2;
     hladnii1<=hladnii2;
+
     return 0;
 }

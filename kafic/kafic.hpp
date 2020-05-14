@@ -3,6 +3,9 @@
 
 #include "list.hpp"
 #include "zaposleni.hpp"
+#include "kafic.hpp"
+#include "kasa.hpp"
+#include "proizvodi.hpp"
 
 class Kafic{
 private:
@@ -11,19 +14,23 @@ private:
     List<Zaposleni> zap;
     int kz;
 
+
+
 public:
 
-    Kafic(){naziv="Naziv kafica"; mesto="Novi Sad"; kz=30;  }
-    Kafic(DinString n, DinString m,int a){naziv=n; mesto=m; kz=a; }
+    Kafic(){naziv="Naziv kafica"; mesto="Novi Sad"; kz=30; }
+    Kafic(DinString n, DinString m,int a ){naziv=n; mesto=m; kz=a;  }
     Kafic(const Kafic &k){naziv=k.naziv; mesto=k.mesto; kz=k.kz;  }
 
     void setNaziv(DinString n){naziv=n; }
     void setMesto(DinString m){mesto=m;}
     void setKapacitet(int a){kz=a; }
 
+
     DinString getNaziv(){return naziv; }
     DinString getMesto(){return mesto; }
     int getKapacitet(){return kz; }
+
 
     friend ostream& operator<<(ostream& out, const Kafic k)
     {
@@ -47,7 +54,7 @@ public:
         zap.remove(n);
     }
 
-    void ispis(){
+    void ispis(Kasa &k){
         Zaposleni z;
         cout<<endl<<"Zaposleni: " << endl;
         cout<<"----------"<<endl;
@@ -66,7 +73,11 @@ public:
             cout<<endl;
         }
         cout<<endl;
+        cout<<k;
+        k.ispisprodato();
+
     }
+
 };
 
 #endif // KAFIC_HPP_INCLUDED

@@ -49,6 +49,7 @@
 		<Unit filename="pice.hpp" />
 		<Unit filename="posudjehrana.hpp" />
 		<Unit filename="posudjepice.hpp" />
+		<Unit filename="prodato.hpp" />
 		<Unit filename="proizvodi.hpp" />
 		<Unit filename="prostorije.hpp" />
 		<Unit filename="rerne.hpp" />

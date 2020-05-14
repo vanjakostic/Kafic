@@ -5,7 +5,7 @@
 1587816128 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\dinstring.hpp
 	<iostream>
 
-1588881878 source:c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\main.cpp
+1589497280 source:c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\main.cpp
 	<iostream>
 	"kafic.hpp"
 	"kasa.hpp"
@@ -36,15 +36,20 @@
 1588676166 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\zaposleni.hpp
 	"dinstring.hpp"
 
-1588765758 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kafic.hpp
+1589497183 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kafic.hpp
 	"list.hpp"
 	"zaposleni.hpp"
+	"kafic.hpp"
+	"kasa.hpp"
+	"proizvodi.hpp"
 
 1588674638 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\list.hpp
 	<stdlib.h>
 	<iostream>
 
-1588680352 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kasa.hpp
+1589497280 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kasa.hpp
+	"list.hpp"
+	"proizvodi.hpp"
 
 1588873254 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\kuhinja.hpp
 	"list.hpp"
@@ -84,7 +89,7 @@
 
 1588764462 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\stolovi.hpp
 
-1588715901 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\proizvodi.hpp
+1589493141 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\proizvodi.hpp
 	"dinstring.hpp"
 
 1588865821 c:\users\user\desktop\Škola\programiranje\13.3.2020\kafic\hrana.hpp
