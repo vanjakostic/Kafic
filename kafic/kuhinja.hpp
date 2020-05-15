@@ -7,6 +7,7 @@
 #include "escajg.hpp"
 #include "posudjehrana.hpp"
 #include "posudjepice.hpp"
+#include "proizvodi.hpp"
 
 class Kuhinja{
 private:
@@ -19,13 +20,15 @@ private:
     Posudjepice pp;
     int kapacitetrerni;
     int kapacitetsporeta;
+    List<Proizvodi> gotovi;
+    int kp;
 
 
 public:
 
-    Kuhinja():e(),ph(),pp(),kapacitetrerni(5),kapacitetsporeta(5){}
-    Kuhinja(int bo, int bd,int ot,int omt, int oc, int pt, int pmt, int pc, int kr, int ks):e(bo,bd), ph(ot,omt,oc,pt,pmt,pc),kapacitetrerni(kr),kapacitetsporeta(ks){}
-    Kuhinja( Kuhinja &k): e(k.e),ph(k.ph),kapacitetrerni(k.kapacitetrerni), kapacitetsporeta(k.kapacitetsporeta){}
+    Kuhinja():e(),ph(),pp(),kapacitetrerni(5),kapacitetsporeta(5),kp(200){}
+    Kuhinja(int bo, int bd,int ot,int omt, int oc, int pt, int pmt, int pc, int kr, int ks, int k):e(bo,bd), ph(ot,omt,oc,pt,pmt,pc),kapacitetrerni(kr),kapacitetsporeta(ks),kp(k){}
+    Kuhinja( Kuhinja &k): e(k.e),ph(k.ph),kapacitetrerni(k.kapacitetrerni), kapacitetsporeta(k.kapacitetsporeta),kp(k.kp){}
 
     bool dodajrernu(const Rerne& r){
             if(rerna.size()<kapacitetrerni){
@@ -99,6 +102,35 @@ public:
 
         pp.ispisposudjepice();
     }
+
+    bool dodajProizvod(const Proizvodi &p){
+        if(gotovi.size()<kp){
+           return gotovi.add(gotovi.size()+1,p);
+        }else
+        return false;
+    }
+
+    void prodajproizvod(const Proizvodi &p,int n){
+        gotovi.remove(n);
+    }
+
+    void ispisproizvodi(){
+        Proizvodi p;
+        cout<<endl<<"Trenutni proizvodi: " << endl;
+        cout<<"----------"<<endl;
+
+        for(int i=1;i<=gotovi.size();i++){
+            cout<<"Proizvod broj "<<i<<":";
+            cout<<endl;
+            gotovi.read(i,p);
+            cout<<"Naziv :"<<p.getNaziv()<<endl;
+            cout<<"Cena :"<<p.getCena()<<endl;
+            cout<<"Kalorije :"<<p.getKalorije()<<endl<<endl;
+        }
+        cout<<endl;
+
+    }
+
 
 };
 

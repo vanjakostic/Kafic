@@ -14,8 +14,6 @@ private:
     List<Zaposleni> zap;
     int kz;
 
-
-
 public:
 
     Kafic(){naziv="Naziv kafica"; mesto="Novi Sad"; kz=30; }

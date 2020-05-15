@@ -63,7 +63,7 @@ int main()
     zaposleni4.setBrojTelefona("0612589347");
     zaposleni4.setZanimanje(kuvar);
 
-
+    Kuhinja kuhinja1;
 
     kaficc1.dodajZaposlenog(zaposleni1);
     kaficc1.dodajZaposlenog(zaposleni2);
@@ -93,8 +93,19 @@ int main()
     Sladoled sladoledd1,sladoledd2,sladoledd3(sladoledd1);
     Sladoled sladoledd4("Sladoled",50,300,kornet,jagoda,srednji,bez_dodatka,nema_preliva);
 
+    kuhinja1.dodajProizvod(kolacc);
+    kuhinja1.dodajProizvod(sladoledd1);
+    kuhinja1.dodajProizvod(sladoledd2);
+    kuhinja1.dodajProizvod(sladoledd3);
+    kuhinja1.dodajProizvod(sladoledd4);
+
+    cout<<"Trenutni proizvodi :"<<cout;
+    kuhinja1.ispisproizvodi();
     kasaa1.dodajukasu(kolacc);
     kasaa1.dodajProdato(kolacc);
+
+    kuhinja1.prodajproizvod(kolacc,1);
+    kuhinja1.ispisproizvodi();
 
     kaficc1.ispis(kasaa1);
     kaficc1.ispis(kasaa1);
@@ -465,6 +476,11 @@ int main()
     Kolaci kolacc3("Kolac",250,360,mali_tanjir,plazmatorta,bez_preliva,bez_slaga,pece_se);
     Kolaci kolacc4;
 
+    kuhinja1.dodajProizvod(kolacc1);
+    kuhinja1.dodajProizvod(kolacc2);
+    kuhinja1.dodajProizvod(kolacc3);
+    kuhinja1.dodajProizvod(kolacc4);
+
     cout<<kolacc1;
     cout<<kolacc3;
     cout<<kolacc4;
@@ -507,6 +523,12 @@ int main()
 
     Slanepalacinke slanaa1,slanaa2,slanaa3("Slana palacinka",260,300,tanjir,slane,palacinke_u_pripremi,vegetarijanska_palacinka,mix_povrca);
     Slanepalacinke slanaa4(slanaa1);
+
+    kuhinja1.dodajProizvod(slanaa1);
+    kuhinja1.dodajProizvod(slanaa2);
+    kuhinja1.dodajProizvod(slanaa3);
+    kuhinja1.dodajProizvod(slanaa4);
+
     slanaa2.setTip(vegetarijanska_palacinka);
     slanaa2.setDodaci(bez_dodatka_slana);
     cout<<slanaa1;
@@ -526,6 +548,11 @@ int main()
 
     Slatkepalacinke slatkaa1,slatkaa2(slatkaa1);
     Slatkepalacinke slatkaa3("Slatka palacinka",320,400,tanjir,slatke,palacinka_se_pece,mars,bez_dodataka_slatka);
+
+    kuhinja1.dodajProizvod(slatkaa1);
+    kuhinja1.dodajProizvod(slatkaa2);
+    kuhinja1.dodajProizvod(slatkaa3);
+
     slatkaa1.setTip(snikers);
     slatkaa1.setDodaci(kikiriki);
     cout<<slatkaa1;
@@ -544,6 +571,11 @@ int main()
 
     Hladninapici hladnii1,hladnii2(hladnii1);
     Hladninapici hladnii3("Milksejk",75,150,casa,0.3,milksejk,sa_ledom,3);
+
+    kuhinja1.dodajProizvod(hladnii1);
+    kuhinja1.dodajProizvod(hladnii2);
+    kuhinja1.dodajProizvod(hladnii3);
+
     hladnii1.setTip(smoothie);
     hladnii1.setBrojkockica(4);
     hladnii1.setLed(sa_ledom);
@@ -564,6 +596,10 @@ int main()
 
     Toplinapici toplii1,toplii2(toplii1);
     Toplinapici toplii3("Topli napitak",140,160,solja,0.2,kafa,secer);
+
+    kuhinja1.dodajProizvod(toplii1);
+    kuhinja1.dodajProizvod(toplii2);
+    kuhinja1.dodajProizvod(toplii3);
     toplii1.setTip(toplacokolada);
     toplii1.setDodatak(bez_dodatka_topli);
 

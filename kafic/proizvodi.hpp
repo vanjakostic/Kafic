@@ -23,11 +23,6 @@ public:
      DinString getNaziv(){return naziv; }
     double getCena(){return cena; }
      double getKalorije(){return kalorije;}
-
-
-
-
-
 };
 
 
