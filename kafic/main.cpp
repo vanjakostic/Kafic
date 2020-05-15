@@ -200,7 +200,7 @@ int main()
 
     cout<<"~~~~~~~GLAVNA SOBA~~~~~~~~"<<endl;
     Glavnasoba glavnasobaa1;
-    Stolovi stoo1,stoo2(zauzet),stoo3(stoo1),stoo4;
+    Stolovi stoo1,stoo2("Sladoled",zauzet),stoo3(stoo1),stoo4;
 
     stoo4.setSto(zauzet);
 
@@ -220,21 +220,25 @@ int main()
         cout<<"Slobodan"<<endl;
     else
         cout<<"Zauzet"<<endl;
+    cout<<stoo1.getPorudzbina()<<endl;
     cout<<"Sto broj 2:";
     if(stoo2.getSto()==slobodan)
         cout<<"Slobodan"<<endl;
     else
         cout<<"Zauzet"<<endl;
+    cout<<stoo2.getPorudzbina()<<endl;
     cout<<"Sto broj 3:";
     if(stoo3.getSto()==slobodan)
         cout<<"Slobodan"<<endl;
     else
         cout<<"Zauzet"<<endl;
+    cout<<stoo3.getPorudzbina()<<endl;
     cout<<"Sto broj 4:";
     if(stoo4.getSto()==slobodan)
         cout<<"Slobodan"<<endl;
     else
         cout<<"Zauzet"<<endl;
+    cout<<stoo4.getPorudzbina()<<endl;
 
     Kuhinja kuhinjaa1,kuhinjaa2(kuhinjaa1);
     cout<<endl<<"~~~~~~~~KUHINJA~~~~~~~~~"<<endl<<endl;

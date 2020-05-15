@@ -3,6 +3,8 @@
 
 #include "stolovi.hpp"
 #include "list.hpp"
+#include "proizvodi.hpp"
+
 class Glavnasoba{
 private:
 
@@ -30,6 +32,7 @@ public:
         for(int i=1;i<=sto.size();i++){
             cout<<"Sto broj "<<i<<":";
             sto.read(i,s);
+            cout<<"Porudzbina :"<<s.getPorudzbina()<<endl;
 
             if(s.getSto()==zauzet)
                 cout<<"Zauzet"<<endl;
